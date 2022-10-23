@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093448E5290393DB000664F5 /* MyCameraView.h in Headers */ = {isa = PBXBuildFile; fileRef = 093448E3290393DB000664F5 /* MyCameraView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		093448E6290393DB000664F5 /* MyCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 093448E4290393DB000664F5 /* MyCameraView.m */; };
+		093448EA29039990000664F5 /* MyDrawUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 093448E829039990000664F5 /* MyDrawUtils.h */; };
+		093448EB29039990000664F5 /* MyDrawUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 093448E929039990000664F5 /* MyDrawUtils.m */; };
+		0959619128713DBA00F2DE6D /* MyDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 0959618F28713DBA00F2DE6D /* MyDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0959619228713DBA00F2DE6D /* MyDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 0959619028713DBA00F2DE6D /* MyDebug.m */; };
+		09669CAB2904D443002A505A /* MyVisionFace.h in Headers */ = {isa = PBXBuildFile; fileRef = 09669CA92904D443002A505A /* MyVisionFace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09669CAC2904D443002A505A /* MyVisionFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 09669CAA2904D443002A505A /* MyVisionFace.m */; };
+		09669CAF2904E1AB002A505A /* MyVisionFaceView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09669CAD2904E1AB002A505A /* MyVisionFaceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09669CB02904E1AB002A505A /* MyVisionFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09669CAE2904E1AB002A505A /* MyVisionFaceView.m */; };
+		0967293A2902EC580030E08E /* MyCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 096729382902EC580030E08E /* MyCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0967293B2902EC580030E08E /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 096729392902EC580030E08E /* MyCamera.m */; };
+		099ADAAC2883067700E61155 /* MyFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 099ADAAA2883067700E61155 /* MyFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		099ADAAD2883067700E61155 /* MyFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ADAAB2883067700E61155 /* MyFile.m */; };
+		09A192D42895779500C82A75 /* MyServiceTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A192D22895779500C82A75 /* MyServiceTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09A192D52895779500C82A75 /* MyServiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A192D32895779500C82A75 /* MyServiceTool.m */; };
+		09A84E0429041F0F00A7570A /* NSString+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A84E0229041F0F00A7570A /* NSString+Utils.h */; };
+		09A84E0529041F0F00A7570A /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A84E0329041F0F00A7570A /* NSString+Utils.m */; };
+		09A84E082904207C00A7570A /* UIView+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A84E062904207C00A7570A /* UIView+Utils.h */; };
+		09A84E092904207C00A7570A /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A84E072904207C00A7570A /* UIView+Utils.m */; };
 		09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */ = {isa = PBXBuildFile; fileRef = 09C840722870A37A00D8C0A1 /* MyTools.docc */; };
 		09C840792870A37A00D8C0A1 /* MyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C8406E2870A37A00D8C0A1 /* MyTools.framework */; };
 		09C8407E2870A37A00D8C0A1 /* MyToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C8407D2870A37A00D8C0A1 /* MyToolsTests.m */; };
@@ -24,6 +44,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		093448E3290393DB000664F5 /* MyCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCameraView.h; sourceTree = "<group>"; };
+		093448E4290393DB000664F5 /* MyCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCameraView.m; sourceTree = "<group>"; };
+		093448E829039990000664F5 /* MyDrawUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDrawUtils.h; sourceTree = "<group>"; };
+		093448E929039990000664F5 /* MyDrawUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDrawUtils.m; sourceTree = "<group>"; };
+		0959618F28713DBA00F2DE6D /* MyDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDebug.h; sourceTree = "<group>"; };
+		0959619028713DBA00F2DE6D /* MyDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDebug.m; sourceTree = "<group>"; };
+		09669CA92904D443002A505A /* MyVisionFace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionFace.h; sourceTree = "<group>"; };
+		09669CAA2904D443002A505A /* MyVisionFace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionFace.m; sourceTree = "<group>"; };
+		09669CAD2904E1AB002A505A /* MyVisionFaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionFaceView.h; sourceTree = "<group>"; };
+		09669CAE2904E1AB002A505A /* MyVisionFaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionFaceView.m; sourceTree = "<group>"; };
+		096729382902EC580030E08E /* MyCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCamera.h; sourceTree = "<group>"; };
+		096729392902EC580030E08E /* MyCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCamera.m; sourceTree = "<group>"; };
+		099ADAAA2883067700E61155 /* MyFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFile.h; sourceTree = "<group>"; };
+		099ADAAB2883067700E61155 /* MyFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFile.m; sourceTree = "<group>"; };
+		09A192D22895779500C82A75 /* MyServiceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyServiceTool.h; sourceTree = "<group>"; };
+		09A192D32895779500C82A75 /* MyServiceTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyServiceTool.m; sourceTree = "<group>"; };
+		09A84E0229041F0F00A7570A /* NSString+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		09A84E0329041F0F00A7570A /* NSString+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		09A84E062904207C00A7570A /* UIView+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		09A84E072904207C00A7570A /* UIView+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		09C8406E2870A37A00D8C0A1 /* MyTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C840712870A37A00D8C0A1 /* MyTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTools.h; sourceTree = "<group>"; };
 		09C840722870A37A00D8C0A1 /* MyTools.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MyTools.docc; sourceTree = "<group>"; };
@@ -50,12 +90,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093448E72903996C000664F5 /* MyUtils */ = {
+			isa = PBXGroup;
+			children = (
+				093448E829039990000664F5 /* MyDrawUtils.h */,
+				093448E929039990000664F5 /* MyDrawUtils.m */,
+				09A84E0229041F0F00A7570A /* NSString+Utils.h */,
+				09A84E0329041F0F00A7570A /* NSString+Utils.m */,
+				09A84E062904207C00A7570A /* UIView+Utils.h */,
+				09A84E072904207C00A7570A /* UIView+Utils.m */,
+			);
+			path = MyUtils;
+			sourceTree = "<group>";
+		};
+		09669CA82904D398002A505A /* MyVision */ = {
+			isa = PBXGroup;
+			children = (
+				09669CA92904D443002A505A /* MyVisionFace.h */,
+				09669CAA2904D443002A505A /* MyVisionFace.m */,
+				09669CAD2904E1AB002A505A /* MyVisionFaceView.h */,
+				09669CAE2904E1AB002A505A /* MyVisionFaceView.m */,
+			);
+			path = MyVision;
+			sourceTree = "<group>";
+		};
+		096729372902EC3D0030E08E /* MyCamera */ = {
+			isa = PBXGroup;
+			children = (
+				096729382902EC580030E08E /* MyCamera.h */,
+				096729392902EC580030E08E /* MyCamera.m */,
+				093448E3290393DB000664F5 /* MyCameraView.h */,
+				093448E4290393DB000664F5 /* MyCameraView.m */,
+			);
+			path = MyCamera;
+			sourceTree = "<group>";
+		};
 		09C840642870A37A00D8C0A1 = {
 			isa = PBXGroup;
 			children = (
 				09C840702870A37A00D8C0A1 /* MyTools */,
 				09C8407C2870A37A00D8C0A1 /* MyToolsTests */,
 				09C8406F2870A37A00D8C0A1 /* Products */,
+				09C840882870A3B400D8C0A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +147,17 @@
 		09C840702870A37A00D8C0A1 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
+				093448E72903996C000664F5 /* MyUtils */,
+				09669CA82904D398002A505A /* MyVision */,
+				096729372902EC3D0030E08E /* MyCamera */,
 				09C840712870A37A00D8C0A1 /* MyTools.h */,
 				09C840722870A37A00D8C0A1 /* MyTools.docc */,
+				0959618F28713DBA00F2DE6D /* MyDebug.h */,
+				0959619028713DBA00F2DE6D /* MyDebug.m */,
+				099ADAAA2883067700E61155 /* MyFile.h */,
+				099ADAAB2883067700E61155 /* MyFile.m */,
+				09A192D22895779500C82A75 /* MyServiceTool.h */,
+				09A192D32895779500C82A75 /* MyServiceTool.m */,
 			);
 			path = MyTools;
 			sourceTree = "<group>";
@@ -85,6 +170,13 @@
 			path = MyToolsTests;
 			sourceTree = "<group>";
 		};
+		09C840882870A3B400D8C0A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -92,7 +184,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093448EA29039990000664F5 /* MyDrawUtils.h in Headers */,
+				0967293A2902EC580030E08E /* MyCamera.h in Headers */,
+				09A84E0429041F0F00A7570A /* NSString+Utils.h in Headers */,
+				093448E5290393DB000664F5 /* MyCameraView.h in Headers */,
+				0959619128713DBA00F2DE6D /* MyDebug.h in Headers */,
+				09A84E082904207C00A7570A /* UIView+Utils.h in Headers */,
+				09669CAF2904E1AB002A505A /* MyVisionFaceView.h in Headers */,
+				09669CAB2904D443002A505A /* MyVisionFace.h in Headers */,
 				09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */,
+				09A192D42895779500C82A75 /* MyServiceTool.h in Headers */,
+				099ADAAC2883067700E61155 /* MyFile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099ADAAD2883067700E61155 /* MyFile.m in Sources */,
 				09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */,
+				0959619228713DBA00F2DE6D /* MyDebug.m in Sources */,
+				09A84E092904207C00A7570A /* UIView+Utils.m in Sources */,
+				09669CAC2904D443002A505A /* MyVisionFace.m in Sources */,
+				093448EB29039990000664F5 /* MyDrawUtils.m in Sources */,
+				09A192D52895779500C82A75 /* MyServiceTool.m in Sources */,
+				09669CB02904E1AB002A505A /* MyVisionFaceView.m in Sources */,
+				0967293B2902EC580030E08E /* MyCamera.m in Sources */,
+				093448E6290393DB000664F5 /* MyCameraView.m in Sources */,
+				09A84E0529041F0F00A7570A /* NSString+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +457,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +467,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ShenTeam.MyTools;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,6 +486,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +496,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ShenTeam.MyTools;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
