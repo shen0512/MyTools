@@ -96,10 +96,12 @@
         UIFont *font = [UIFont systemFontOfSize:50];
         CGFloat textW = [key stringWidth:font];
         CGFloat textH = [key stringHeight:font];
-        CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
-        [key drawAtPoint:CGPointMake(bbox.origin.x, bbox.origin.y-textH) withAttributes:@{NSFontAttributeName:font}];
+        
         CGContextSetFillColorWithColor(context, [UIColor greenColor].CGColor);
         CGContextFillRect(context, CGRectMake(bbox.origin.x, bbox.origin.y-textH, textW, textH));
+        
+        CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+        [key drawAtPoint:CGPointMake(bbox.origin.x, bbox.origin.y-textH) withAttributes:@{NSFontAttributeName:font}];
     }
     
     UIImage *drawResult=UIGraphicsGetImageFromCurrentImageContext();
