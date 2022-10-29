@@ -19,7 +19,7 @@
             if([observations count] > 0){
                 NSMutableArray *tmpResult = [NSMutableArray new];
                 for(VNFaceObservation *face in observations){
-                    CGRect tmpBbox = [MyVisionUtils visionBbox2UIImageBbox:image bbox:[face boundingBox]];
+                    CGRect tmpBbox = [MyVisionUtils bboxVision2UIImage:image bbox:[face boundingBox]];
                     [tmpResult addObject:@(tmpBbox)];
                 }
                 results(tmpResult);
@@ -49,12 +49,12 @@
                 NSMutableArray *tmpLandmarkResults = [NSMutableArray new];
                 for(VNFaceObservation *face in observations){
                     CGRect tmpBbox = [face boundingBox];
-                    [tmpBboxResults addObject:@([MyVisionUtils visionBbox2UIImageBbox:image bbox:tmpBbox])];
+                    [tmpBboxResults addObject:@([MyVisionUtils bboxVision2UIImage:image bbox:tmpBbox])];
                     
                     VNFaceLandmarkRegion2D *landmarks = face.landmarks.allPoints;
                     NSMutableArray *tmpPoints = [NSMutableArray new];
                     for(int i=0; i<[landmarks pointCount]; i++){
-                        CGPoint tmpPoint = [MyVisionUtils visionPoint2UIImagePoint:image :tmpBbox :landmarks.normalizedPoints[i]];
+                        CGPoint tmpPoint = [MyVisionUtils landmarkVision2UIImage:image :tmpBbox :landmarks.normalizedPoints[i]];
                         [tmpPoints addObject:@(tmpPoint)];
                     }
                     [tmpLandmarkResults addObject:tmpPoints];

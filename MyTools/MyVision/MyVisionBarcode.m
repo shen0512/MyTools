@@ -19,13 +19,13 @@
             NSMutableArray *tmpResult = [NSMutableArray new];
             for(VNBarcodeObservation *barocde in observations){
                 [tmpResult addObject:@{@"value":barocde.payloadStringValue,
-                                       @"bbox":@([MyVisionUtils visionBbox2UIImageBbox:image bbox:barocde.boundingBox]),
+                                       @"bbox":@([MyVisionUtils bboxVision2UIImage:image bbox:barocde.boundingBox]),
                                        @"conf":@(barocde.confidence)
                                      }];
             }
             results(tmpResult);
         }else{
-            results([NSArray new]);
+            results(nil);
         }
     }];
     
@@ -47,19 +47,19 @@
                 if([tmpResult objectForKey:value]){
                     CGFloat tmpConf = [tmpResult[value][@"conf"] floatValue];
                     if(barocde.confidence > tmpConf){
-                        tmpResult[value] = @{@"bbox":@([MyVisionUtils visionBbox2UIImageBbox:image bbox:barocde.boundingBox]),
+                        tmpResult[value] = @{@"bbox":@([MyVisionUtils bboxVision2UIImage:image bbox:barocde.boundingBox]),
                                              @"conf":@(barocde.confidence)};
                     }
                     
                 }else{
-                    tmpResult[value] = @{@"bbox":@([MyVisionUtils visionBbox2UIImageBbox:image bbox:barocde.boundingBox]),
+                    tmpResult[value] = @{@"bbox":@([MyVisionUtils bboxVision2UIImage:image bbox:barocde.boundingBox]),
                                          @"conf":@(barocde.confidence)};
                 }
             }
             results(tmpResult);
             
         }else{
-            results([NSDictionary new]);
+            results(nil);
         }
         
     }];

@@ -13,6 +13,10 @@
 		090A72D6290CBF3D009AB42C /* NSString+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 090A72D0290CBF3D009AB42C /* NSString+Utils.h */; };
 		090A72D7290CBF3D009AB42C /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 090A72D1290CBF3D009AB42C /* NSString+Utils.m */; };
 		090A72D8290CBF3D009AB42C /* UIView+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 090A72D2290CBF3D009AB42C /* UIView+Utils.h */; };
+		090A72E9290CD591009AB42C /* MyVisionRectangle.h in Headers */ = {isa = PBXBuildFile; fileRef = 090A72E7290CD591009AB42C /* MyVisionRectangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090A72EA290CD591009AB42C /* MyVisionRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 090A72E8290CD591009AB42C /* MyVisionRectangle.m */; };
+		090A72ED290CD725009AB42C /* MyVisionRectangleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 090A72EB290CD725009AB42C /* MyVisionRectangleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090A72EE290CD725009AB42C /* MyVisionRectangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090A72EC290CD725009AB42C /* MyVisionRectangleView.m */; };
 		093448E5290393DB000664F5 /* MyCameraView.h in Headers */ = {isa = PBXBuildFile; fileRef = 093448E3290393DB000664F5 /* MyCameraView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093448E6290393DB000664F5 /* MyCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 093448E4290393DB000664F5 /* MyCameraView.m */; };
 		0959619128713DBA00F2DE6D /* MyDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 0959618F28713DBA00F2DE6D /* MyDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,6 +60,10 @@
 		090A72D0290CBF3D009AB42C /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
 		090A72D1290CBF3D009AB42C /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
 		090A72D2290CBF3D009AB42C /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		090A72E7290CD591009AB42C /* MyVisionRectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionRectangle.h; sourceTree = "<group>"; };
+		090A72E8290CD591009AB42C /* MyVisionRectangle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionRectangle.m; sourceTree = "<group>"; };
+		090A72EB290CD725009AB42C /* MyVisionRectangleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionRectangleView.h; sourceTree = "<group>"; };
+		090A72EC290CD725009AB42C /* MyVisionRectangleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionRectangleView.m; sourceTree = "<group>"; };
 		093448E3290393DB000664F5 /* MyCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCameraView.h; sourceTree = "<group>"; };
 		093448E4290393DB000664F5 /* MyCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCameraView.m; sourceTree = "<group>"; };
 		0959618F28713DBA00F2DE6D /* MyDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDebug.h; sourceTree = "<group>"; };
@@ -128,6 +136,10 @@
 				09F552132906C01A00F4F54D /* MyVisionBarcode.m */,
 				09F552162906C32700F4F54D /* MyVisionBarcodeView.h */,
 				09F552172906C32700F4F54D /* MyVisionBarcodeView.m */,
+				090A72E7290CD591009AB42C /* MyVisionRectangle.h */,
+				090A72E8290CD591009AB42C /* MyVisionRectangle.m */,
+				090A72EB290CD725009AB42C /* MyVisionRectangleView.h */,
+				090A72EC290CD725009AB42C /* MyVisionRectangleView.m */,
 			);
 			path = MyVision;
 			sourceTree = "<group>";
@@ -211,6 +223,8 @@
 				09F5522B2906CABC00F4F54D /* MyVisionUtils.h in Headers */,
 				09F552142906C01A00F4F54D /* MyVisionBarcode.h in Headers */,
 				09669CAB2904D443002A505A /* MyVisionFace.h in Headers */,
+				090A72E9290CD591009AB42C /* MyVisionRectangle.h in Headers */,
+				090A72ED290CD725009AB42C /* MyVisionRectangleView.h in Headers */,
 				090A72D5290CBF3D009AB42C /* MyDrawUtils.h in Headers */,
 				09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */,
 				090A72D8290CBF3D009AB42C /* UIView+Utils.h in Headers */,
@@ -316,11 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090A72EE290CD725009AB42C /* MyVisionRectangleView.m in Sources */,
 				090A72D4290CBF3D009AB42C /* UIView+Utils.m in Sources */,
 				099ADAAD2883067700E61155 /* MyFile.m in Sources */,
 				09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */,
 				0959619228713DBA00F2DE6D /* MyDebug.m in Sources */,
 				09F552192906C32700F4F54D /* MyVisionBarcodeView.m in Sources */,
+				090A72EA290CD591009AB42C /* MyVisionRectangle.m in Sources */,
 				09669CAC2904D443002A505A /* MyVisionFace.m in Sources */,
 				090A72D3290CBF3D009AB42C /* MyDrawUtils.m in Sources */,
 				09F552152906C01A00F4F54D /* MyVisionBarcode.m in Sources */,
