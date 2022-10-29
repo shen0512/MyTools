@@ -22,3 +22,5 @@ FOUNDATION_EXPORT const unsigned char MyToolsVersionString[];
 #import "MyCameraView.h"
 #import "MyVisionFace.h"
 #import "MyVisionFaceView.h"
+#import "MyVisionBarcode.h"
+#import "MyVisionBarcodeView.h"

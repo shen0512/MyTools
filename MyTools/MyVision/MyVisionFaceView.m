@@ -6,11 +6,11 @@
 //
 
 #import "MyVisionFaceView.h"
-#import "MyDrawUtils.h"
+#import "MyVisionFace.h"
 #import "MyCamera.h"
 #import "UIView+Utils.h"
 #import "NSString+Utils.h"
-#import "MyVisionFace.h"
+
 
 @interface MyVisionFaceView()<MyCameraDelegate>
 @property (nonatomic) MyCamera *myCamera;
@@ -107,13 +107,8 @@
     });
     
     if([self.detectType isEqualToString:@"face"]){
-        [MyVisionFace detectFace:frame results:^(NSArray * _Nonnull results) {
-            UIImage *canvas = [MyDrawUtils createCanvas:frame.size.width :frame.size.height];
-            for(int i=0; i<[results count]; i++){
-                CGRect tmpBbox = [results[i] CGRectValue];
-                canvas = [MyDrawUtils drawRect:canvas :tmpBbox];
-            }
-            
+        [MyVisionFace detect:frame results:^(NSArray * _Nonnull results) {
+            UIImage *canvas = [self drawBboxes:frame.size.width height:frame.size.height bboxes:results];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.drawView.image = canvas;
                 self.isDetect = NO;
@@ -121,19 +116,12 @@
             
         }];
     }else if ([self.detectType isEqualToString:@"face+landmark"]){
-        [MyVisionFace detectFaceWithLandmark:frame results:^(NSDictionary * _Nonnull results) {
-            UIImage *canvas = [MyDrawUtils createCanvas:frame.size.width :frame.size.height];
+        [MyVisionFace detectWithLandmark:frame results:^(NSDictionary * _Nonnull results) {
             
             NSArray *bboxes = results[@"bboxes"];
             NSArray *landmarks = results[@"landmarks"];
-            for(int i=0; i<[bboxes count]; i++){
-                CGRect tmpBbox = [bboxes[i] CGRectValue];
-                canvas = [MyDrawUtils drawRect:canvas :tmpBbox];
-                
-                NSArray *tmpLandmark = landmarks[i];
-                canvas = [MyDrawUtils drawPointByPoints:canvas :tmpLandmark];
-            }
             
+            UIImage *canvas = [self drawBboxesWithLandmark:frame.size.width height:frame.size.height bboxes:bboxes landmarks:landmarks];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.drawView.image = canvas;
                 self.isDetect = NO;
@@ -175,5 +163,50 @@
     }
     
 }
+
+#pragma mark Draw result
+- (UIImage*)drawBboxes:(CGFloat)width height:(CGFloat)height bboxes:(NSArray*)bboxes{
+    UIGraphicsBeginImageContext(CGSizeMake(width, height));
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    for(int i=0; i<[bboxes count]; i++){
+        [[UIColor greenColor] setStroke];
+        CGContextSetLineWidth(context, 5);
+        CGContextAddRect(context, [bboxes[i]CGRectValue]);
+        CGContextDrawPath(context, kCGPathStroke);
+    }
+    
+    UIImage *result=UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return result;
+}
+
+- (UIImage*)drawBboxesWithLandmark:(CGFloat)width height:(CGFloat)height bboxes:(NSArray*)bboxes landmarks:(NSArray*)landmarks{
+    UIGraphicsBeginImageContext(CGSizeMake(width, height));
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    for(int i=0; i<[bboxes count]; i++){
+        [[UIColor greenColor] setStroke];
+        CGContextSetLineWidth(context, 5);
+        CGContextAddRect(context, [bboxes[i]CGRectValue]);
+        CGContextDrawPath(context, kCGPathStroke);
+        
+        for(int j=0; j<[landmarks[i] count]; j++){
+            [[UIColor redColor] setStroke];
+            CGContextSetLineWidth(context, 10);
+            CGPoint point = [landmarks[i][j] CGPointValue];
+            CGContextAddRect(context, CGRectMake(point.x-2, point.y-2, 4, 4));
+            CGContextDrawPath(context, kCGPathFillStroke);
+        }
+        
+    }
+    
+    UIImage *result=UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return result;
+}
+
 
 @end

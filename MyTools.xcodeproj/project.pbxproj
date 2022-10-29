@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090A72D3290CBF3D009AB42C /* MyDrawUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 090A72CD290CBF3C009AB42C /* MyDrawUtils.m */; };
+		090A72D4290CBF3D009AB42C /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 090A72CE290CBF3C009AB42C /* UIView+Utils.m */; };
+		090A72D5290CBF3D009AB42C /* MyDrawUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 090A72CF290CBF3D009AB42C /* MyDrawUtils.h */; };
+		090A72D6290CBF3D009AB42C /* NSString+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 090A72D0290CBF3D009AB42C /* NSString+Utils.h */; };
+		090A72D7290CBF3D009AB42C /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 090A72D1290CBF3D009AB42C /* NSString+Utils.m */; };
+		090A72D8290CBF3D009AB42C /* UIView+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 090A72D2290CBF3D009AB42C /* UIView+Utils.h */; };
 		093448E5290393DB000664F5 /* MyCameraView.h in Headers */ = {isa = PBXBuildFile; fileRef = 093448E3290393DB000664F5 /* MyCameraView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093448E6290393DB000664F5 /* MyCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 093448E4290393DB000664F5 /* MyCameraView.m */; };
-		093448EA29039990000664F5 /* MyDrawUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 093448E829039990000664F5 /* MyDrawUtils.h */; };
-		093448EB29039990000664F5 /* MyDrawUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 093448E929039990000664F5 /* MyDrawUtils.m */; };
 		0959619128713DBA00F2DE6D /* MyDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 0959618F28713DBA00F2DE6D /* MyDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0959619228713DBA00F2DE6D /* MyDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 0959619028713DBA00F2DE6D /* MyDebug.m */; };
 		09669CAB2904D443002A505A /* MyVisionFace.h in Headers */ = {isa = PBXBuildFile; fileRef = 09669CA92904D443002A505A /* MyVisionFace.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,14 +27,16 @@
 		099ADAAD2883067700E61155 /* MyFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ADAAB2883067700E61155 /* MyFile.m */; };
 		09A192D42895779500C82A75 /* MyServiceTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A192D22895779500C82A75 /* MyServiceTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09A192D52895779500C82A75 /* MyServiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A192D32895779500C82A75 /* MyServiceTool.m */; };
-		09A84E0429041F0F00A7570A /* NSString+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A84E0229041F0F00A7570A /* NSString+Utils.h */; };
-		09A84E0529041F0F00A7570A /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A84E0329041F0F00A7570A /* NSString+Utils.m */; };
-		09A84E082904207C00A7570A /* UIView+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A84E062904207C00A7570A /* UIView+Utils.h */; };
-		09A84E092904207C00A7570A /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A84E072904207C00A7570A /* UIView+Utils.m */; };
 		09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */ = {isa = PBXBuildFile; fileRef = 09C840722870A37A00D8C0A1 /* MyTools.docc */; };
 		09C840792870A37A00D8C0A1 /* MyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C8406E2870A37A00D8C0A1 /* MyTools.framework */; };
 		09C8407E2870A37A00D8C0A1 /* MyToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C8407D2870A37A00D8C0A1 /* MyToolsTests.m */; };
 		09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C840712870A37A00D8C0A1 /* MyTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09F552142906C01A00F4F54D /* MyVisionBarcode.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F552122906C01A00F4F54D /* MyVisionBarcode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09F552152906C01A00F4F54D /* MyVisionBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F552132906C01A00F4F54D /* MyVisionBarcode.m */; };
+		09F552182906C32700F4F54D /* MyVisionBarcodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F552162906C32700F4F54D /* MyVisionBarcodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09F552192906C32700F4F54D /* MyVisionBarcodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F552172906C32700F4F54D /* MyVisionBarcodeView.m */; };
+		09F5522B2906CABC00F4F54D /* MyVisionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F552292906CABC00F4F54D /* MyVisionUtils.h */; };
+		09F5522C2906CABC00F4F54D /* MyVisionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F5522A2906CABC00F4F54D /* MyVisionUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090A72CD290CBF3C009AB42C /* MyDrawUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDrawUtils.m; sourceTree = "<group>"; };
+		090A72CE290CBF3C009AB42C /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		090A72CF290CBF3D009AB42C /* MyDrawUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDrawUtils.h; sourceTree = "<group>"; };
+		090A72D0290CBF3D009AB42C /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		090A72D1290CBF3D009AB42C /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		090A72D2290CBF3D009AB42C /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		093448E3290393DB000664F5 /* MyCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCameraView.h; sourceTree = "<group>"; };
 		093448E4290393DB000664F5 /* MyCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCameraView.m; sourceTree = "<group>"; };
-		093448E829039990000664F5 /* MyDrawUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDrawUtils.h; sourceTree = "<group>"; };
-		093448E929039990000664F5 /* MyDrawUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDrawUtils.m; sourceTree = "<group>"; };
 		0959618F28713DBA00F2DE6D /* MyDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDebug.h; sourceTree = "<group>"; };
 		0959619028713DBA00F2DE6D /* MyDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDebug.m; sourceTree = "<group>"; };
 		09669CA92904D443002A505A /* MyVisionFace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionFace.h; sourceTree = "<group>"; };
@@ -60,15 +70,17 @@
 		099ADAAB2883067700E61155 /* MyFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFile.m; sourceTree = "<group>"; };
 		09A192D22895779500C82A75 /* MyServiceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyServiceTool.h; sourceTree = "<group>"; };
 		09A192D32895779500C82A75 /* MyServiceTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyServiceTool.m; sourceTree = "<group>"; };
-		09A84E0229041F0F00A7570A /* NSString+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
-		09A84E0329041F0F00A7570A /* NSString+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
-		09A84E062904207C00A7570A /* UIView+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
-		09A84E072904207C00A7570A /* UIView+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		09C8406E2870A37A00D8C0A1 /* MyTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C840712870A37A00D8C0A1 /* MyTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTools.h; sourceTree = "<group>"; };
 		09C840722870A37A00D8C0A1 /* MyTools.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MyTools.docc; sourceTree = "<group>"; };
 		09C840782870A37A00D8C0A1 /* MyToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C8407D2870A37A00D8C0A1 /* MyToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyToolsTests.m; sourceTree = "<group>"; };
+		09F552122906C01A00F4F54D /* MyVisionBarcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionBarcode.h; sourceTree = "<group>"; };
+		09F552132906C01A00F4F54D /* MyVisionBarcode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionBarcode.m; sourceTree = "<group>"; };
+		09F552162906C32700F4F54D /* MyVisionBarcodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionBarcodeView.h; sourceTree = "<group>"; };
+		09F552172906C32700F4F54D /* MyVisionBarcodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionBarcodeView.m; sourceTree = "<group>"; };
+		09F552292906CABC00F4F54D /* MyVisionUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionUtils.h; sourceTree = "<group>"; };
+		09F5522A2906CABC00F4F54D /* MyVisionUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,15 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		093448E72903996C000664F5 /* MyUtils */ = {
+		090A72CC290CBF31009AB42C /* MyUtils */ = {
 			isa = PBXGroup;
 			children = (
-				093448E829039990000664F5 /* MyDrawUtils.h */,
-				093448E929039990000664F5 /* MyDrawUtils.m */,
-				09A84E0229041F0F00A7570A /* NSString+Utils.h */,
-				09A84E0329041F0F00A7570A /* NSString+Utils.m */,
-				09A84E062904207C00A7570A /* UIView+Utils.h */,
-				09A84E072904207C00A7570A /* UIView+Utils.m */,
+				090A72CF290CBF3D009AB42C /* MyDrawUtils.h */,
+				090A72CD290CBF3C009AB42C /* MyDrawUtils.m */,
+				090A72D0290CBF3D009AB42C /* NSString+Utils.h */,
+				090A72D1290CBF3D009AB42C /* NSString+Utils.m */,
+				090A72D2290CBF3D009AB42C /* UIView+Utils.h */,
+				090A72CE290CBF3C009AB42C /* UIView+Utils.m */,
 			);
 			path = MyUtils;
 			sourceTree = "<group>";
@@ -106,10 +118,16 @@
 		09669CA82904D398002A505A /* MyVision */ = {
 			isa = PBXGroup;
 			children = (
+				09F552292906CABC00F4F54D /* MyVisionUtils.h */,
+				09F5522A2906CABC00F4F54D /* MyVisionUtils.m */,
 				09669CA92904D443002A505A /* MyVisionFace.h */,
 				09669CAA2904D443002A505A /* MyVisionFace.m */,
 				09669CAD2904E1AB002A505A /* MyVisionFaceView.h */,
 				09669CAE2904E1AB002A505A /* MyVisionFaceView.m */,
+				09F552122906C01A00F4F54D /* MyVisionBarcode.h */,
+				09F552132906C01A00F4F54D /* MyVisionBarcode.m */,
+				09F552162906C32700F4F54D /* MyVisionBarcodeView.h */,
+				09F552172906C32700F4F54D /* MyVisionBarcodeView.m */,
 			);
 			path = MyVision;
 			sourceTree = "<group>";
@@ -147,7 +165,7 @@
 		09C840702870A37A00D8C0A1 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
-				093448E72903996C000664F5 /* MyUtils */,
+				090A72CC290CBF31009AB42C /* MyUtils */,
 				09669CA82904D398002A505A /* MyVision */,
 				096729372902EC3D0030E08E /* MyCamera */,
 				09C840712870A37A00D8C0A1 /* MyTools.h */,
@@ -184,15 +202,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				093448EA29039990000664F5 /* MyDrawUtils.h in Headers */,
 				0967293A2902EC580030E08E /* MyCamera.h in Headers */,
-				09A84E0429041F0F00A7570A /* NSString+Utils.h in Headers */,
 				093448E5290393DB000664F5 /* MyCameraView.h in Headers */,
 				0959619128713DBA00F2DE6D /* MyDebug.h in Headers */,
-				09A84E082904207C00A7570A /* UIView+Utils.h in Headers */,
+				09F552182906C32700F4F54D /* MyVisionBarcodeView.h in Headers */,
+				090A72D6290CBF3D009AB42C /* NSString+Utils.h in Headers */,
 				09669CAF2904E1AB002A505A /* MyVisionFaceView.h in Headers */,
+				09F5522B2906CABC00F4F54D /* MyVisionUtils.h in Headers */,
+				09F552142906C01A00F4F54D /* MyVisionBarcode.h in Headers */,
 				09669CAB2904D443002A505A /* MyVisionFace.h in Headers */,
+				090A72D5290CBF3D009AB42C /* MyDrawUtils.h in Headers */,
 				09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */,
+				090A72D8290CBF3D009AB42C /* UIView+Utils.h in Headers */,
 				09A192D42895779500C82A75 /* MyServiceTool.h in Headers */,
 				099ADAAC2883067700E61155 /* MyFile.h in Headers */,
 			);
@@ -295,17 +316,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090A72D4290CBF3D009AB42C /* UIView+Utils.m in Sources */,
 				099ADAAD2883067700E61155 /* MyFile.m in Sources */,
 				09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */,
 				0959619228713DBA00F2DE6D /* MyDebug.m in Sources */,
-				09A84E092904207C00A7570A /* UIView+Utils.m in Sources */,
+				09F552192906C32700F4F54D /* MyVisionBarcodeView.m in Sources */,
 				09669CAC2904D443002A505A /* MyVisionFace.m in Sources */,
-				093448EB29039990000664F5 /* MyDrawUtils.m in Sources */,
+				090A72D3290CBF3D009AB42C /* MyDrawUtils.m in Sources */,
+				09F552152906C01A00F4F54D /* MyVisionBarcode.m in Sources */,
 				09A192D52895779500C82A75 /* MyServiceTool.m in Sources */,
 				09669CB02904E1AB002A505A /* MyVisionFaceView.m in Sources */,
 				0967293B2902EC580030E08E /* MyCamera.m in Sources */,
+				09F5522C2906CABC00F4F54D /* MyVisionUtils.m in Sources */,
 				093448E6290393DB000664F5 /* MyCameraView.m in Sources */,
-				09A84E0529041F0F00A7570A /* NSString+Utils.m in Sources */,
+				090A72D7290CBF3D009AB42C /* NSString+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

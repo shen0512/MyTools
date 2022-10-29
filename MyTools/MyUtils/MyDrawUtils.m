@@ -6,18 +6,20 @@
 //
 
 #import "MyDrawUtils.h"
+#import "NSString+Utils.h"
 
 @implementation MyDrawUtils
 
-+ (UIImage*)createCanvas:(CGFloat)width :(CGFloat)height{
-    /**
-     @brief 建立透明畫布
-     @return 透明畫布
-     */
++ (UIImage*)createCanvas:(CGFloat)width height:(CGFloat)height bgColor:(UIColor* _Nullable)bgColor{
+    
     UIGraphicsBeginImageContext(CGSizeMake(width, height));
     CGContextRef context = UIGraphicsGetCurrentContext();
-    UIColor *bgColor = [UIColor colorWithWhite:1 alpha:1];
-    CGContextSetFillColorWithColor(context, bgColor.CGColor);
+    
+    if(bgColor){
+        CGContextSetFillColorWithColor(context, bgColor.CGColor);
+        CGContextFillRect(context, CGRectMake(0, 0, width, height));
+    }
+    
     
     UIImage *result=UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -25,77 +27,64 @@
     return result;
 }
 
-+ (UIImage*)drawRect:(UIImage*)canvas :(CGRect)rect{
-    /**
-     @brief 將矩形在畫布上
-     @param canvas 畫布
-     @param rect 矩形
-     @return 畫矩形後的圖片
-     */
-    UIGraphicsBeginImageContext(CGSizeMake(canvas.size.width, canvas.size.height));
++ (UIImage*)drawBbox:(UIImage*)canvas bbox:(CGRect)bbox bboxColor:(UIColor*)bboxColor{
     
-    // 設定透明背景
+    UIGraphicsBeginImageContext(CGSizeMake(canvas.size.width, canvas.size.height));
     CGContextRef context = UIGraphicsGetCurrentContext();
     [canvas drawAtPoint:CGPointMake(0, 0)];
 
-    // 設定矩形線條寬度及線條顏色
-    [[UIColor redColor] setStroke];
+    [bboxColor setStroke];
     CGContextSetLineWidth(context, 5);
-    CGContextAddRect(context, rect);
+    CGContextAddRect(context, bbox);
     CGContextDrawPath(context, kCGPathStroke);
     
-    // 結束
     UIImage *result=UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return result;
 }
 
-+ (UIImage*)drawPoint:(UIImage*)canvas :(CGPoint)point{
-    /**
-     @brief 將點畫在畫布上
-     @param canvas 畫布
-     @param point 座標點
-     @return 畫座標點後的圖片
-     */
++ (UIImage*)drawPoint:(UIImage*)canvas point:(CGPoint)point pointColor:(UIColor*)pointColor{
     
     UIGraphicsBeginImageContext(CGSizeMake(canvas.size.width, canvas.size.height));
-    
-    // 設定透明背景
     CGContextRef context = UIGraphicsGetCurrentContext();
     [canvas drawAtPoint:CGPointMake(0, 0)];
     
-    // 設定矩形線條寬度及線條顏色
-    [[UIColor greenColor] setStroke];
+    [pointColor setStroke];
     CGContextSetLineWidth(context, 10);
     CGContextAddRect(context, CGRectMake(point.x-2, point.y-2, 4, 4));
     CGContextDrawPath(context, kCGPathFillStroke);
     
-    // 結束
     UIImage *result=UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return result;
 }
 
-+ (UIImage*)drawPointByPoints:(UIImage*)canvas :(NSArray*)points{
++ (UIImage*)drawText:(UIImage*)canvas text:(NSString*)text attributes:(NSDictionary*)attributes{
+    CGPoint position = [attributes[@"position"] CGPointValue];
+    UIFont *textFont = attributes[@"font"];
+    UIColor *textColor = attributes[@"color"];
+    UIColor *bgColor = attributes[@"bgColor"];
+    
+    NSDictionary *textFontAttributes = @{NSFontAttributeName:textFont};
+    CGFloat textW = [text stringWidth:textFont];
+    CGFloat textH = [text stringHeight:textFont];
     
     UIGraphicsBeginImageContext(CGSizeMake(canvas.size.width, canvas.size.height));
-    
-    // 設定透明背景
     CGContextRef context = UIGraphicsGetCurrentContext();
     [canvas drawAtPoint:CGPointMake(0, 0)];
     
-    // 設定矩形線條寬度及線條顏色
-    [[UIColor greenColor] setStroke];
-    CGContextSetLineWidth(context, 5);
-    for(int i=0; i<[points count]; i++){
-        CGPoint point = [points[i] CGPointValue];
-        CGContextAddRect(context, CGRectMake(point.x-2, point.y-2, 4, 4));
-        CGContextDrawPath(context, kCGPathFillStroke);
+    // background color
+    if(bgColor){
+        CGContextSetFillColorWithColor(context, bgColor.CGColor);
+        CGContextFillRect(context, CGRectMake(position.x, position.y, textW, textH));
     }
     
-    // 結束
+    // draw text
+    CGContextSetFillColorWithColor(context, textColor.CGColor);
+    [text drawAtPoint:CGPointMake(position.x, position.y) withAttributes:textFontAttributes];
+    
     UIImage *result=UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
