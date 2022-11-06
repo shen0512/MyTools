@@ -19,6 +19,11 @@
 		090A72EE290CD725009AB42C /* MyVisionRectangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090A72EC290CD725009AB42C /* MyVisionRectangleView.m */; };
 		093448E5290393DB000664F5 /* MyCameraView.h in Headers */ = {isa = PBXBuildFile; fileRef = 093448E3290393DB000664F5 /* MyCameraView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093448E6290393DB000664F5 /* MyCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 093448E4290393DB000664F5 /* MyCameraView.m */; };
+		0943C3BB29169C4900A7B936 /* MyDeepLabV3.h in Headers */ = {isa = PBXBuildFile; fileRef = 0943C3B929169C4900A7B936 /* MyDeepLabV3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0943C3BC29169C4900A7B936 /* MyDeepLabV3.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C3BA29169C4900A7B936 /* MyDeepLabV3.m */; };
+		0943C3BE29169D4700A7B936 /* DeepLabV3.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0943C3BD29169D4700A7B936 /* DeepLabV3.mlkitmodel */; };
+		0943C3C129169E9700A7B936 /* MyDeepLabV3View.h in Headers */ = {isa = PBXBuildFile; fileRef = 0943C3BF29169E9600A7B936 /* MyDeepLabV3View.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0943C3C229169E9700A7B936 /* MyDeepLabV3View.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C3C029169E9600A7B936 /* MyDeepLabV3View.m */; };
 		0959619128713DBA00F2DE6D /* MyDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 0959618F28713DBA00F2DE6D /* MyDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0959619228713DBA00F2DE6D /* MyDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 0959619028713DBA00F2DE6D /* MyDebug.m */; };
 		09669CAB2904D443002A505A /* MyVisionFace.h in Headers */ = {isa = PBXBuildFile; fileRef = 09669CA92904D443002A505A /* MyVisionFace.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +71,11 @@
 		090A72EC290CD725009AB42C /* MyVisionRectangleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionRectangleView.m; sourceTree = "<group>"; };
 		093448E3290393DB000664F5 /* MyCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCameraView.h; sourceTree = "<group>"; };
 		093448E4290393DB000664F5 /* MyCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCameraView.m; sourceTree = "<group>"; };
+		0943C3B929169C4900A7B936 /* MyDeepLabV3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDeepLabV3.h; sourceTree = "<group>"; };
+		0943C3BA29169C4900A7B936 /* MyDeepLabV3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeepLabV3.m; sourceTree = "<group>"; };
+		0943C3BD29169D4700A7B936 /* DeepLabV3.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlkitmodel; sourceTree = "<group>"; };
+		0943C3BF29169E9600A7B936 /* MyDeepLabV3View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDeepLabV3View.h; sourceTree = "<group>"; };
+		0943C3C029169E9600A7B936 /* MyDeepLabV3View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeepLabV3View.m; sourceTree = "<group>"; };
 		0959618F28713DBA00F2DE6D /* MyDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDebug.h; sourceTree = "<group>"; };
 		0959619028713DBA00F2DE6D /* MyDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDebug.m; sourceTree = "<group>"; };
 		09669CA92904D443002A505A /* MyVisionFace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionFace.h; sourceTree = "<group>"; };
@@ -123,6 +133,18 @@
 			path = MyUtils;
 			sourceTree = "<group>";
 		};
+		0943C3B429169B9900A7B936 /* MyCoreML */ = {
+			isa = PBXGroup;
+			children = (
+				0943C3BD29169D4700A7B936 /* DeepLabV3.mlkitmodel */,
+				0943C3B929169C4900A7B936 /* MyDeepLabV3.h */,
+				0943C3BA29169C4900A7B936 /* MyDeepLabV3.m */,
+				0943C3BF29169E9600A7B936 /* MyDeepLabV3View.h */,
+				0943C3C029169E9600A7B936 /* MyDeepLabV3View.m */,
+			);
+			path = MyCoreML;
+			sourceTree = "<group>";
+		};
 		09669CA82904D398002A505A /* MyVision */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				090A72CC290CBF31009AB42C /* MyUtils */,
+				0943C3B429169B9900A7B936 /* MyCoreML */,
 				09669CA82904D398002A505A /* MyVision */,
 				096729372902EC3D0030E08E /* MyCamera */,
 				09C840712870A37A00D8C0A1 /* MyTools.h */,
@@ -224,6 +247,8 @@
 				09F552142906C01A00F4F54D /* MyVisionBarcode.h in Headers */,
 				09669CAB2904D443002A505A /* MyVisionFace.h in Headers */,
 				090A72E9290CD591009AB42C /* MyVisionRectangle.h in Headers */,
+				0943C3C129169E9700A7B936 /* MyDeepLabV3View.h in Headers */,
+				0943C3BB29169C4900A7B936 /* MyDeepLabV3.h in Headers */,
 				090A72ED290CD725009AB42C /* MyVisionRectangleView.h in Headers */,
 				090A72D5290CBF3D009AB42C /* MyDrawUtils.h in Headers */,
 				09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */,
@@ -334,17 +359,20 @@
 				090A72D4290CBF3D009AB42C /* UIView+Utils.m in Sources */,
 				099ADAAD2883067700E61155 /* MyFile.m in Sources */,
 				09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */,
+				0943C3BC29169C4900A7B936 /* MyDeepLabV3.m in Sources */,
 				0959619228713DBA00F2DE6D /* MyDebug.m in Sources */,
 				09F552192906C32700F4F54D /* MyVisionBarcodeView.m in Sources */,
 				090A72EA290CD591009AB42C /* MyVisionRectangle.m in Sources */,
 				09669CAC2904D443002A505A /* MyVisionFace.m in Sources */,
 				090A72D3290CBF3D009AB42C /* MyDrawUtils.m in Sources */,
+				0943C3C229169E9700A7B936 /* MyDeepLabV3View.m in Sources */,
 				09F552152906C01A00F4F54D /* MyVisionBarcode.m in Sources */,
 				09A192D52895779500C82A75 /* MyServiceTool.m in Sources */,
 				09669CB02904E1AB002A505A /* MyVisionFaceView.m in Sources */,
 				0967293B2902EC580030E08E /* MyCamera.m in Sources */,
 				09F5522C2906CABC00F4F54D /* MyVisionUtils.m in Sources */,
 				093448E6290393DB000664F5 /* MyCameraView.m in Sources */,
+				0943C3BE29169D4700A7B936 /* DeepLabV3.mlkitmodel in Sources */,
 				090A72D7290CBF3D009AB42C /* NSString+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

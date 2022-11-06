@@ -94,11 +94,17 @@
 
 
 - (void)startCapture{
-    [self.captureSession startRunning];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.captureSession startRunning];
+    });
+    
 }
 
 - (void)stopCapture{
-    [self.captureSession stopRunning];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.captureSession stopRunning];
+    });
+    
 }
 
 - (void)changeLens{

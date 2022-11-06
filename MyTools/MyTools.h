@@ -26,3 +26,5 @@ FOUNDATION_EXPORT const unsigned char MyToolsVersionString[];
 #import "MyVisionBarcodeView.h"
 #import "MyVisionRectangle.h"
 #import "MyVisionRectangleView.h"
+#import "MyDeepLabV3.h"
+#import "MyDeepLabV3View.h"
