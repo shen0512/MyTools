@@ -136,7 +136,7 @@
 		0943C3B429169B9900A7B936 /* MyCoreML */ = {
 			isa = PBXGroup;
 			children = (
-				0943C3BD29169D4700A7B936 /* DeepLabV3.mlkitmodel */,
+				09CC79692917A44800517154 /* model */,
 				0943C3B929169C4900A7B936 /* MyDeepLabV3.h */,
 				0943C3BA29169C4900A7B936 /* MyDeepLabV3.m */,
 				0943C3BF29169E9600A7B936 /* MyDeepLabV3View.h */,
@@ -228,6 +228,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09CC79692917A44800517154 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0943C3BD29169D4700A7B936 /* DeepLabV3.mlkitmodel */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

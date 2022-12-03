@@ -108,25 +108,28 @@
 }
 
 - (void)changeLens{
-    if([self.captureSession isRunning]){
-        [self.captureSession stopRunning];
-    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if([self.captureSession isRunning]){
+            [self.captureSession stopRunning];
+        }
+        
+        if(self.deviceInput){
+            [self.captureSession removeInput:self.deviceInput];
+            self.deviceInput = nil;
+        }
+        
+        AVCaptureDevice *captureDevice;
+        if(self.isFrontLens){
+            captureDevice = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeBuiltInWideAngleCamera mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionBack];
+        }else{
+            captureDevice = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeBuiltInWideAngleCamera mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionFront];
+        }
+        self.isFrontLens = !self.isFrontLens;
+        self.deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:nil];
+        [self.captureSession addInput:self.deviceInput];
+        [self.captureSession startRunning];
+    });
     
-    if(self.deviceInput){
-        [self.captureSession removeInput:self.deviceInput];
-        self.deviceInput = nil;
-    }
-    
-    AVCaptureDevice *captureDevice;
-    if(self.isFrontLens){
-        captureDevice = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeBuiltInWideAngleCamera mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionBack];
-    }else{
-        captureDevice = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeBuiltInWideAngleCamera mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionFront];
-    }
-    self.isFrontLens = !self.isFrontLens;
-    self.deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:nil];
-    [self.captureSession addInput:self.deviceInput];
-    [self.captureSession startRunning];
 }
 
 @end
