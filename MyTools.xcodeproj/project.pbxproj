@@ -32,6 +32,12 @@
 		09669CB02904E1AB002A505A /* MyVisionFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09669CAE2904E1AB002A505A /* MyVisionFaceView.m */; };
 		0967293A2902EC580030E08E /* MyCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 096729382902EC580030E08E /* MyCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0967293B2902EC580030E08E /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 096729392902EC580030E08E /* MyCamera.m */; };
+		098DA28A293B9DD3003D2274 /* MyVisionPersonSegmentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 098DA288293B9DD3003D2274 /* MyVisionPersonSegmentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		098DA28B293B9DD3003D2274 /* MyVisionPersonSegmentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 098DA289293B9DD3003D2274 /* MyVisionPersonSegmentation.m */; };
+		098DA290293B9FE9003D2274 /* UIWindow+PreventScreenShot.h in Headers */ = {isa = PBXBuildFile; fileRef = 098DA28E293B9FE9003D2274 /* UIWindow+PreventScreenShot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		098DA291293B9FE9003D2274 /* UIWindow+PreventScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 098DA28F293B9FE9003D2274 /* UIWindow+PreventScreenShot.m */; };
+		098DA298293BA8FC003D2274 /* MyVisionPersonSegmentationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098DA296293BA8FC003D2274 /* MyVisionPersonSegmentationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		098DA299293BA8FC003D2274 /* MyVisionPersonSegmentationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098DA297293BA8FC003D2274 /* MyVisionPersonSegmentationView.m */; };
 		099ADAAC2883067700E61155 /* MyFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 099ADAAA2883067700E61155 /* MyFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		099ADAAD2883067700E61155 /* MyFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ADAAB2883067700E61155 /* MyFile.m */; };
 		09A192D42895779500C82A75 /* MyServiceTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A192D22895779500C82A75 /* MyServiceTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,6 +90,12 @@
 		09669CAE2904E1AB002A505A /* MyVisionFaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionFaceView.m; sourceTree = "<group>"; };
 		096729382902EC580030E08E /* MyCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCamera.h; sourceTree = "<group>"; };
 		096729392902EC580030E08E /* MyCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCamera.m; sourceTree = "<group>"; };
+		098DA288293B9DD3003D2274 /* MyVisionPersonSegmentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionPersonSegmentation.h; sourceTree = "<group>"; };
+		098DA289293B9DD3003D2274 /* MyVisionPersonSegmentation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionPersonSegmentation.m; sourceTree = "<group>"; };
+		098DA28E293B9FE9003D2274 /* UIWindow+PreventScreenShot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+PreventScreenShot.h"; sourceTree = "<group>"; };
+		098DA28F293B9FE9003D2274 /* UIWindow+PreventScreenShot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+PreventScreenShot.m"; sourceTree = "<group>"; };
+		098DA296293BA8FC003D2274 /* MyVisionPersonSegmentationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionPersonSegmentationView.h; sourceTree = "<group>"; };
+		098DA297293BA8FC003D2274 /* MyVisionPersonSegmentationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionPersonSegmentationView.m; sourceTree = "<group>"; };
 		099ADAAA2883067700E61155 /* MyFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFile.h; sourceTree = "<group>"; };
 		099ADAAB2883067700E61155 /* MyFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFile.m; sourceTree = "<group>"; };
 		09A192D22895779500C82A75 /* MyServiceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyServiceTool.h; sourceTree = "<group>"; };
@@ -162,6 +174,10 @@
 				090A72E8290CD591009AB42C /* MyVisionRectangle.m */,
 				090A72EB290CD725009AB42C /* MyVisionRectangleView.h */,
 				090A72EC290CD725009AB42C /* MyVisionRectangleView.m */,
+				098DA288293B9DD3003D2274 /* MyVisionPersonSegmentation.h */,
+				098DA289293B9DD3003D2274 /* MyVisionPersonSegmentation.m */,
+				098DA296293BA8FC003D2274 /* MyVisionPersonSegmentationView.h */,
+				098DA297293BA8FC003D2274 /* MyVisionPersonSegmentationView.m */,
 			);
 			path = MyVision;
 			sourceTree = "<group>";
@@ -175,6 +191,15 @@
 				093448E4290393DB000664F5 /* MyCameraView.m */,
 			);
 			path = MyCamera;
+			sourceTree = "<group>";
+		};
+		098DA292293BA0F7003D2274 /* MyPreventScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				098DA28E293B9FE9003D2274 /* UIWindow+PreventScreenShot.h */,
+				098DA28F293B9FE9003D2274 /* UIWindow+PreventScreenShot.m */,
+			);
+			path = MyPreventScreenShot;
 			sourceTree = "<group>";
 		};
 		09C840642870A37A00D8C0A1 = {
@@ -199,6 +224,7 @@
 		09C840702870A37A00D8C0A1 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
+				098DA292293BA0F7003D2274 /* MyPreventScreenShot */,
 				090A72CC290CBF31009AB42C /* MyUtils */,
 				0943C3B429169B9900A7B936 /* MyCoreML */,
 				09669CA82904D398002A505A /* MyVision */,
@@ -259,6 +285,9 @@
 				0943C3BB29169C4900A7B936 /* MyDeepLabV3.h in Headers */,
 				090A72ED290CD725009AB42C /* MyVisionRectangleView.h in Headers */,
 				090A72D5290CBF3D009AB42C /* MyDrawUtils.h in Headers */,
+				098DA298293BA8FC003D2274 /* MyVisionPersonSegmentationView.h in Headers */,
+				098DA28A293B9DD3003D2274 /* MyVisionPersonSegmentation.h in Headers */,
+				098DA290293B9FE9003D2274 /* UIWindow+PreventScreenShot.h in Headers */,
 				09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */,
 				090A72D8290CBF3D009AB42C /* UIView+Utils.h in Headers */,
 				09A192D42895779500C82A75 /* MyServiceTool.h in Headers */,
@@ -363,12 +392,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098DA291293B9FE9003D2274 /* UIWindow+PreventScreenShot.m in Sources */,
 				090A72EE290CD725009AB42C /* MyVisionRectangleView.m in Sources */,
 				090A72D4290CBF3D009AB42C /* UIView+Utils.m in Sources */,
+				098DA28B293B9DD3003D2274 /* MyVisionPersonSegmentation.m in Sources */,
 				099ADAAD2883067700E61155 /* MyFile.m in Sources */,
 				09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */,
 				0943C3BC29169C4900A7B936 /* MyDeepLabV3.m in Sources */,
 				0959619228713DBA00F2DE6D /* MyDebug.m in Sources */,
+				098DA299293BA8FC003D2274 /* MyVisionPersonSegmentationView.m in Sources */,
 				09F552192906C32700F4F54D /* MyVisionBarcodeView.m in Sources */,
 				090A72EA290CD591009AB42C /* MyVisionRectangle.m in Sources */,
 				09669CAC2904D443002A505A /* MyVisionFace.m in Sources */,
