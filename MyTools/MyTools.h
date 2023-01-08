@@ -16,6 +16,8 @@ FOUNDATION_EXPORT const unsigned char MyToolsVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <MyTools/PublicHeader.h>
 
 #import "MyDebug.h"
+#import "MyLog.h"
+#import "MyLogV2.h"
 #import "MyFile.h"
 #import "MyServiceTool.h"
 #import "MyCamera.h"

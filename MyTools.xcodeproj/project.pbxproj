@@ -42,6 +42,8 @@
 		099ADAAD2883067700E61155 /* MyFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ADAAB2883067700E61155 /* MyFile.m */; };
 		09A192D42895779500C82A75 /* MyServiceTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A192D22895779500C82A75 /* MyServiceTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09A192D52895779500C82A75 /* MyServiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A192D32895779500C82A75 /* MyServiceTool.m */; };
+		09AADBDA296ABC1C00E95FC2 /* MyLogV2.h in Headers */ = {isa = PBXBuildFile; fileRef = 09AADBD8296ABC1C00E95FC2 /* MyLogV2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09AADBDB296ABC1C00E95FC2 /* MyLogV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AADBD9296ABC1C00E95FC2 /* MyLogV2.m */; };
 		09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */ = {isa = PBXBuildFile; fileRef = 09C840722870A37A00D8C0A1 /* MyTools.docc */; };
 		09C840792870A37A00D8C0A1 /* MyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C8406E2870A37A00D8C0A1 /* MyTools.framework */; };
 		09C8407E2870A37A00D8C0A1 /* MyToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C8407D2870A37A00D8C0A1 /* MyToolsTests.m */; };
@@ -52,6 +54,8 @@
 		09F552192906C32700F4F54D /* MyVisionBarcodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F552172906C32700F4F54D /* MyVisionBarcodeView.m */; };
 		09F5522B2906CABC00F4F54D /* MyVisionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F552292906CABC00F4F54D /* MyVisionUtils.h */; };
 		09F5522C2906CABC00F4F54D /* MyVisionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F5522A2906CABC00F4F54D /* MyVisionUtils.m */; };
+		09FF46322969D7CB0042EDB9 /* MyLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 09FF46302969D7CB0042EDB9 /* MyLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09FF46332969D7CB0042EDB9 /* MyLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FF46312969D7CB0042EDB9 /* MyLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +104,8 @@
 		099ADAAB2883067700E61155 /* MyFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFile.m; sourceTree = "<group>"; };
 		09A192D22895779500C82A75 /* MyServiceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyServiceTool.h; sourceTree = "<group>"; };
 		09A192D32895779500C82A75 /* MyServiceTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyServiceTool.m; sourceTree = "<group>"; };
+		09AADBD8296ABC1C00E95FC2 /* MyLogV2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLogV2.h; sourceTree = "<group>"; };
+		09AADBD9296ABC1C00E95FC2 /* MyLogV2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLogV2.m; sourceTree = "<group>"; };
 		09C8406E2870A37A00D8C0A1 /* MyTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C840712870A37A00D8C0A1 /* MyTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTools.h; sourceTree = "<group>"; };
 		09C840722870A37A00D8C0A1 /* MyTools.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MyTools.docc; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 		09F552172906C32700F4F54D /* MyVisionBarcodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionBarcodeView.m; sourceTree = "<group>"; };
 		09F552292906CABC00F4F54D /* MyVisionUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionUtils.h; sourceTree = "<group>"; };
 		09F5522A2906CABC00F4F54D /* MyVisionUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionUtils.m; sourceTree = "<group>"; };
+		09FF46302969D7CB0042EDB9 /* MyLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLog.h; sourceTree = "<group>"; };
+		09FF46312969D7CB0042EDB9 /* MyLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +232,7 @@
 		09C840702870A37A00D8C0A1 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
+				09FF462F2969D7B50042EDB9 /* MyDebug */,
 				098DA292293BA0F7003D2274 /* MyPreventScreenShot */,
 				090A72CC290CBF31009AB42C /* MyUtils */,
 				0943C3B429169B9900A7B936 /* MyCoreML */,
@@ -231,8 +240,6 @@
 				096729372902EC3D0030E08E /* MyCamera */,
 				09C840712870A37A00D8C0A1 /* MyTools.h */,
 				09C840722870A37A00D8C0A1 /* MyTools.docc */,
-				0959618F28713DBA00F2DE6D /* MyDebug.h */,
-				0959619028713DBA00F2DE6D /* MyDebug.m */,
 				099ADAAA2883067700E61155 /* MyFile.h */,
 				099ADAAB2883067700E61155 /* MyFile.m */,
 				09A192D22895779500C82A75 /* MyServiceTool.h */,
@@ -264,6 +271,19 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		09FF462F2969D7B50042EDB9 /* MyDebug */ = {
+			isa = PBXGroup;
+			children = (
+				0959618F28713DBA00F2DE6D /* MyDebug.h */,
+				0959619028713DBA00F2DE6D /* MyDebug.m */,
+				09FF46302969D7CB0042EDB9 /* MyLog.h */,
+				09FF46312969D7CB0042EDB9 /* MyLog.m */,
+				09AADBD8296ABC1C00E95FC2 /* MyLogV2.h */,
+				09AADBD9296ABC1C00E95FC2 /* MyLogV2.m */,
+			);
+			path = MyDebug;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -288,6 +308,8 @@
 				098DA298293BA8FC003D2274 /* MyVisionPersonSegmentationView.h in Headers */,
 				098DA28A293B9DD3003D2274 /* MyVisionPersonSegmentation.h in Headers */,
 				098DA290293B9FE9003D2274 /* UIWindow+PreventScreenShot.h in Headers */,
+				09AADBDA296ABC1C00E95FC2 /* MyLogV2.h in Headers */,
+				09FF46322969D7CB0042EDB9 /* MyLog.h in Headers */,
 				09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */,
 				090A72D8290CBF3D009AB42C /* UIView+Utils.h in Headers */,
 				09A192D42895779500C82A75 /* MyServiceTool.h in Headers */,
@@ -404,11 +426,13 @@
 				09F552192906C32700F4F54D /* MyVisionBarcodeView.m in Sources */,
 				090A72EA290CD591009AB42C /* MyVisionRectangle.m in Sources */,
 				09669CAC2904D443002A505A /* MyVisionFace.m in Sources */,
+				09AADBDB296ABC1C00E95FC2 /* MyLogV2.m in Sources */,
 				090A72D3290CBF3D009AB42C /* MyDrawUtils.m in Sources */,
 				0943C3C229169E9700A7B936 /* MyDeepLabV3View.m in Sources */,
 				09F552152906C01A00F4F54D /* MyVisionBarcode.m in Sources */,
 				09A192D52895779500C82A75 /* MyServiceTool.m in Sources */,
 				09669CB02904E1AB002A505A /* MyVisionFaceView.m in Sources */,
+				09FF46332969D7CB0042EDB9 /* MyLog.m in Sources */,
 				0967293B2902EC580030E08E /* MyCamera.m in Sources */,
 				09F5522C2906CABC00F4F54D /* MyVisionUtils.m in Sources */,
 				093448E6290393DB000664F5 /* MyCameraView.m in Sources */,
