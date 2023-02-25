@@ -32,6 +32,10 @@
 		09669CB02904E1AB002A505A /* MyVisionFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09669CAE2904E1AB002A505A /* MyVisionFaceView.m */; };
 		0967293A2902EC580030E08E /* MyCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 096729382902EC580030E08E /* MyCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0967293B2902EC580030E08E /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 096729392902EC580030E08E /* MyCamera.m */; };
+		0970B26B29AA54DA00C8DC57 /* MySpeech.h in Headers */ = {isa = PBXBuildFile; fileRef = 0970B26729AA54DA00C8DC57 /* MySpeech.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0970B26C29AA54DA00C8DC57 /* MySpeechView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0970B26829AA54DA00C8DC57 /* MySpeechView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0970B26D29AA54DA00C8DC57 /* MySpeechView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970B26929AA54DA00C8DC57 /* MySpeechView.m */; };
+		0970B26E29AA54DA00C8DC57 /* MySpeech.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970B26A29AA54DA00C8DC57 /* MySpeech.m */; };
 		098DA28A293B9DD3003D2274 /* MyVisionPersonSegmentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 098DA288293B9DD3003D2274 /* MyVisionPersonSegmentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098DA28B293B9DD3003D2274 /* MyVisionPersonSegmentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 098DA289293B9DD3003D2274 /* MyVisionPersonSegmentation.m */; };
 		098DA290293B9FE9003D2274 /* UIWindow+PreventScreenShot.h in Headers */ = {isa = PBXBuildFile; fileRef = 098DA28E293B9FE9003D2274 /* UIWindow+PreventScreenShot.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -94,6 +98,10 @@
 		09669CAE2904E1AB002A505A /* MyVisionFaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionFaceView.m; sourceTree = "<group>"; };
 		096729382902EC580030E08E /* MyCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCamera.h; sourceTree = "<group>"; };
 		096729392902EC580030E08E /* MyCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCamera.m; sourceTree = "<group>"; };
+		0970B26729AA54DA00C8DC57 /* MySpeech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySpeech.h; sourceTree = "<group>"; };
+		0970B26829AA54DA00C8DC57 /* MySpeechView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySpeechView.h; sourceTree = "<group>"; };
+		0970B26929AA54DA00C8DC57 /* MySpeechView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySpeechView.m; sourceTree = "<group>"; };
+		0970B26A29AA54DA00C8DC57 /* MySpeech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySpeech.m; sourceTree = "<group>"; };
 		098DA288293B9DD3003D2274 /* MyVisionPersonSegmentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionPersonSegmentation.h; sourceTree = "<group>"; };
 		098DA289293B9DD3003D2274 /* MyVisionPersonSegmentation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionPersonSegmentation.m; sourceTree = "<group>"; };
 		098DA28E293B9FE9003D2274 /* UIWindow+PreventScreenShot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+PreventScreenShot.h"; sourceTree = "<group>"; };
@@ -201,6 +209,17 @@
 			path = MyCamera;
 			sourceTree = "<group>";
 		};
+		0970B26629AA54A000C8DC57 /* MySpeech */ = {
+			isa = PBXGroup;
+			children = (
+				0970B26729AA54DA00C8DC57 /* MySpeech.h */,
+				0970B26A29AA54DA00C8DC57 /* MySpeech.m */,
+				0970B26829AA54DA00C8DC57 /* MySpeechView.h */,
+				0970B26929AA54DA00C8DC57 /* MySpeechView.m */,
+			);
+			path = MySpeech;
+			sourceTree = "<group>";
+		};
 		098DA292293BA0F7003D2274 /* MyPreventScreenShot */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +251,7 @@
 		09C840702870A37A00D8C0A1 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
+				0970B26629AA54A000C8DC57 /* MySpeech */,
 				09FF462F2969D7B50042EDB9 /* MyDebug */,
 				098DA292293BA0F7003D2274 /* MyPreventScreenShot */,
 				090A72CC290CBF31009AB42C /* MyUtils */,
@@ -308,6 +328,8 @@
 				098DA298293BA8FC003D2274 /* MyVisionPersonSegmentationView.h in Headers */,
 				098DA28A293B9DD3003D2274 /* MyVisionPersonSegmentation.h in Headers */,
 				098DA290293B9FE9003D2274 /* UIWindow+PreventScreenShot.h in Headers */,
+				0970B26B29AA54DA00C8DC57 /* MySpeech.h in Headers */,
+				0970B26C29AA54DA00C8DC57 /* MySpeechView.h in Headers */,
 				09AADBDA296ABC1C00E95FC2 /* MyLogV2.h in Headers */,
 				09FF46322969D7CB0042EDB9 /* MyLog.h in Headers */,
 				09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */,
@@ -415,9 +437,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				098DA291293B9FE9003D2274 /* UIWindow+PreventScreenShot.m in Sources */,
+				0970B26D29AA54DA00C8DC57 /* MySpeechView.m in Sources */,
 				090A72EE290CD725009AB42C /* MyVisionRectangleView.m in Sources */,
 				090A72D4290CBF3D009AB42C /* UIView+Utils.m in Sources */,
 				098DA28B293B9DD3003D2274 /* MyVisionPersonSegmentation.m in Sources */,
+				0970B26E29AA54DA00C8DC57 /* MySpeech.m in Sources */,
 				099ADAAD2883067700E61155 /* MyFile.m in Sources */,
 				09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */,
 				0943C3BC29169C4900A7B936 /* MyDeepLabV3.m in Sources */,
