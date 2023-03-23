@@ -52,6 +52,8 @@
 		09C840792870A37A00D8C0A1 /* MyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C8406E2870A37A00D8C0A1 /* MyTools.framework */; };
 		09C8407E2870A37A00D8C0A1 /* MyToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C8407D2870A37A00D8C0A1 /* MyToolsTests.m */; };
 		09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C840712870A37A00D8C0A1 /* MyTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09E0108F29CC929E008585CD /* MyAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E0108D29CC929E008585CD /* MyAuthenticator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09E0109029CC929E008585CD /* MyAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E0108E29CC929E008585CD /* MyAuthenticator.m */; };
 		09F552142906C01A00F4F54D /* MyVisionBarcode.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F552122906C01A00F4F54D /* MyVisionBarcode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09F552152906C01A00F4F54D /* MyVisionBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F552132906C01A00F4F54D /* MyVisionBarcode.m */; };
 		09F552182906C32700F4F54D /* MyVisionBarcodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F552162906C32700F4F54D /* MyVisionBarcodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -119,6 +121,8 @@
 		09C840722870A37A00D8C0A1 /* MyTools.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MyTools.docc; sourceTree = "<group>"; };
 		09C840782870A37A00D8C0A1 /* MyToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C8407D2870A37A00D8C0A1 /* MyToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyToolsTests.m; sourceTree = "<group>"; };
+		09E0108D29CC929E008585CD /* MyAuthenticator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAuthenticator.h; sourceTree = "<group>"; };
+		09E0108E29CC929E008585CD /* MyAuthenticator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAuthenticator.m; sourceTree = "<group>"; };
 		09F552122906C01A00F4F54D /* MyVisionBarcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionBarcode.h; sourceTree = "<group>"; };
 		09F552132906C01A00F4F54D /* MyVisionBarcode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionBarcode.m; sourceTree = "<group>"; };
 		09F552162906C32700F4F54D /* MyVisionBarcodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionBarcodeView.h; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 		09C840702870A37A00D8C0A1 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
+				09E0108C29CC926E008585CD /* MyAuthentication */,
 				0970B26629AA54A000C8DC57 /* MySpeech */,
 				09FF462F2969D7B50042EDB9 /* MyDebug */,
 				098DA292293BA0F7003D2274 /* MyPreventScreenShot */,
@@ -291,6 +296,15 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		09E0108C29CC926E008585CD /* MyAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				09E0108D29CC929E008585CD /* MyAuthenticator.h */,
+				09E0108E29CC929E008585CD /* MyAuthenticator.m */,
+			);
+			path = MyAuthentication;
+			sourceTree = "<group>";
+		};
 		09FF462F2969D7B50042EDB9 /* MyDebug */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +325,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E0108F29CC929E008585CD /* MyAuthenticator.h in Headers */,
 				0967293A2902EC580030E08E /* MyCamera.h in Headers */,
 				093448E5290393DB000664F5 /* MyCameraView.h in Headers */,
 				0959619128713DBA00F2DE6D /* MyDebug.h in Headers */,
@@ -462,6 +477,7 @@
 				093448E6290393DB000664F5 /* MyCameraView.m in Sources */,
 				0943C3BE29169D4700A7B936 /* DeepLabV3.mlkitmodel in Sources */,
 				090A72D7290CBF3D009AB42C /* NSString+Utils.m in Sources */,
+				09E0109029CC929E008585CD /* MyAuthenticator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
