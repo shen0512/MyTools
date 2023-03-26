@@ -18,7 +18,7 @@
 |---|---|---|
 |result|(void(^)(BOOL success, NSString  * _Nullable error))|辨識成功時success回傳YES;辨識失敗時success回傳NO,並且帶回錯誤訊息|
 
-<font style=background:blue>Example</font>
+Example
 ```objectivec=
 #import <MyTools/MyAuthenticator.h>
 
