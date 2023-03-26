@@ -1,13 +1,13 @@
-# ```MyAuthenticator```
+# MyAuthenticator
 
-## Overview
+## ```Overview```
 透過指紋辨識或FaceID進行生物辨識
 
-## Notice
+## ```Notice```
 1. 加入 "Privacy - Face ID Usage Description" 至 Info.plist
 2. import <MyTools/MyAuthenticator.h>
 
-## Static Method
+## ```Static Method```
 |Method|Description|
 |---|---|
 |[+ (void)authenticator:(void(^)(BOOL success, NSString  * _Nullable error))result](#authenticator)|進行生物辨識|
@@ -17,7 +17,7 @@
 |---|---|---|
 |result|(void(^)(BOOL success, NSString  * _Nullable error))|辨識成功時success回傳YES;辨識失敗時success回傳NO,並且帶回錯誤訊息|
 
-## Example
+## ```Example```
 ```objectivec=
 //  ViewController.m
 
