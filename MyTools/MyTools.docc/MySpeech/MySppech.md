@@ -14,8 +14,7 @@
 |---|---|
 |[-(void)getResult:(NSString*)result](#getResult)|取得語音辨識結果|
 
-### Detail
-#### getResult
+### getResult
 |Param|Type|Description|
 |---|---|---|
 |result|NSString|語音辨識結果|

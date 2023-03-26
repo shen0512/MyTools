@@ -12,8 +12,7 @@
 |---|---|
 |[+ (void)authenticator:(void(^)(BOOL success, NSString  * _Nullable error))result](#authenticator)|進行生物辨識|
 
-### Detail
-#### authenticator
+### authenticator
 |Param|Type|Description|
 |---|---|---|
 |result|(void(^)(BOOL success, NSString  * _Nullable error))|辨識成功時success回傳YES;辨識失敗時success回傳NO,並且帶回錯誤訊息|
