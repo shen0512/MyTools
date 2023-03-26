@@ -2,4 +2,5 @@
 ## Package
 |Package|Description|
 |---|---|
-|[MyAuthenticator](./MyAuthenticator/MyAuthenticator.md)|透過指紋辨識或FaceID進行生物辨識|
+|[MyAuthenticator](./MyAuthenticator)|生物辨識|
+|[MySpeech](./MySpeech)|語音辨識|

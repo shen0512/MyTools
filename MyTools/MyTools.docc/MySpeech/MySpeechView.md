@@ -6,7 +6,7 @@
 ## Notice
 1. 加入 "Privacy - Microphone Usage Description" 至 Info.plist
 2. 加入 "Privacy - Speech Recognition Usage Description" 至 Info.plist
-
+3. import <MyTools/MySpeechView.h>
 
 ## Example
 ```objectivec=

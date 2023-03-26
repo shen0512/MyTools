@@ -5,6 +5,7 @@
 
 ## Notice
 1. 加入 "Privacy - Face ID Usage Description" 至 Info.plist
+2. import <MyTools/MyAuthenticator.h>
 
 ## Static Method
 |Method|Description|
@@ -19,17 +20,32 @@
 
 ## Example
 ```objectivec=
+//  ViewController.m
+
+#import "ViewController.h"
 #import <MyTools/MyAuthenticator.h>
 
-[MyAuthenticator authenticator:^(BOOL success, NSString * _Nullable error) {
-    if(success){
-        // 辨識成功
-    }else{
-        // 辨識失敗
-        NSLog(@"error: %@", error);
-    }
-}];
+@implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [MyAuthenticator authenticator:^(BOOL success, NSString * _Nullable error) {
+        if(success){
+            // 辨識成功
+        }else{
+            // 辨識失敗
+            NSLog(@"error: %@", error);
+        }
+    }];
+}
+
+@end
 ```
 ![](authenticator1.png)\
 ![](authenticator2.png)\

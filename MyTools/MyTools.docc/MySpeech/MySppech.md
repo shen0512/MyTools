@@ -6,7 +6,8 @@
 ## Notice
 1. 加入 "Privacy - Microphone Usage Description" 至 Info.plist
 2. 加入 "Privacy - Speech Recognition Usage Description" 至 Info.plist
-3. 添加 "MySpeechDelegate"
+3. import <MyTools/MySpeech.h>
+4. 添加 "MySpeechDelegate"
 
 ## Delegate Method
 |Method|Description|
