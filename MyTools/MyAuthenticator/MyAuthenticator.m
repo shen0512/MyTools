@@ -14,7 +14,7 @@
     LAContext *context = [[LAContext alloc] init];
 //    context.localizedFallbackTitle = @""; // 更改 fall back 按鈕文字，空字串即可移除按鈕
 //    context.localizedCancelTitle = @""; // 更改取消按鈕的文字
-    NSError *error = nil;
+    NSError *error;
     NSString *reason = @"生物認證";
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics

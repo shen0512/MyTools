@@ -255,7 +255,7 @@
 		09C840702870A37A00D8C0A1 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
-				09E0108C29CC926E008585CD /* MyAuthentication */,
+				09E0108C29CC926E008585CD /* MyAuthenticator */,
 				0970B26629AA54A000C8DC57 /* MySpeech */,
 				09FF462F2969D7B50042EDB9 /* MyDebug */,
 				098DA292293BA0F7003D2274 /* MyPreventScreenShot */,
@@ -296,13 +296,13 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		09E0108C29CC926E008585CD /* MyAuthentication */ = {
+		09E0108C29CC926E008585CD /* MyAuthenticator */ = {
 			isa = PBXGroup;
 			children = (
 				09E0108D29CC929E008585CD /* MyAuthenticator.h */,
 				09E0108E29CC929E008585CD /* MyAuthenticator.m */,
 			);
-			path = MyAuthentication;
+			path = MyAuthenticator;
 			sourceTree = "<group>";
 		};
 		09FF462F2969D7B50042EDB9 /* MyDebug */ = {
