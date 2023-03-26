@@ -32,6 +32,6 @@ Example
 }];
 
 ```
-![](authenticator1.png)
-![](authenticator2.png)
+![](authenticator1.png)\
+![](authenticator2.png)\
 ![](authenticator3.png)
