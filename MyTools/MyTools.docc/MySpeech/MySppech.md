@@ -12,7 +12,7 @@
 ## ```Delegate Method```
 |Method|Description|
 |---|---|
-|[-(void)getResult:(NSString*)result](#getResult)|取得語音辨識結果|
+|[- (void)getResult:(NSString*)result](#getResult)|取得語音辨識結果|
 
 ### getResult
 |Param|Type|Description|
@@ -22,8 +22,8 @@
 ## ```Instance Method```
 |Method|Description|
 |---|---|
-|startListening|開始監聽|
-|stopListening|取消監聽|
+|- (void)startListening|開始監聽|
+|- (void)stopListening|取消監聽|
 
 ## ```Example```
 ```objectivec=
