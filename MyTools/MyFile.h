@@ -13,11 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString*)getUUID;
 + (NSString*)getDocumentPath;
++ (NSString*)getTemporaryDirectory;
 + (void)createFolder:(NSString *)path;
 + (NSArray*)loadJson:(NSString*)path;
 + (void)writeJson:(NSString*)path :(id) data :(BOOL)replace;
-+ (void)writeJsonDic:(NSString*)path :(NSDictionary*) data :(BOOL)replace;
-
++ (NSArray*)loadText:(NSString*)path;
++ (void)writeText:(NSString*)path data:(id)data replace:(BOOL)replace;
 @end
 
 NS_ASSUME_NONNULL_END

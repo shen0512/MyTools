@@ -50,7 +50,6 @@
 		09AADBDB296ABC1C00E95FC2 /* MyLogV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AADBD9296ABC1C00E95FC2 /* MyLogV2.m */; };
 		09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */ = {isa = PBXBuildFile; fileRef = 09C840722870A37A00D8C0A1 /* MyTools.docc */; };
 		09C840792870A37A00D8C0A1 /* MyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C8406E2870A37A00D8C0A1 /* MyTools.framework */; };
-		09C8407E2870A37A00D8C0A1 /* MyToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C8407D2870A37A00D8C0A1 /* MyToolsTests.m */; };
 		09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C840712870A37A00D8C0A1 /* MyTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E0108F29CC929E008585CD /* MyAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E0108D29CC929E008585CD /* MyAuthenticator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E0109029CC929E008585CD /* MyAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E0108E29CC929E008585CD /* MyAuthenticator.m */; };
@@ -120,7 +119,6 @@
 		09C840712870A37A00D8C0A1 /* MyTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTools.h; sourceTree = "<group>"; };
 		09C840722870A37A00D8C0A1 /* MyTools.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MyTools.docc; sourceTree = "<group>"; };
 		09C840782870A37A00D8C0A1 /* MyToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09C8407D2870A37A00D8C0A1 /* MyToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyToolsTests.m; sourceTree = "<group>"; };
 		09E0108D29CC929E008585CD /* MyAuthenticator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAuthenticator.h; sourceTree = "<group>"; };
 		09E0108E29CC929E008585CD /* MyAuthenticator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAuthenticator.m; sourceTree = "<group>"; };
 		09F552122906C01A00F4F54D /* MyVisionBarcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionBarcode.h; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				09C840702870A37A00D8C0A1 /* MyTools */,
-				09C8407C2870A37A00D8C0A1 /* MyToolsTests */,
 				09C8406F2870A37A00D8C0A1 /* Products */,
 				09C840882870A3B400D8C0A1 /* Frameworks */,
 			);
@@ -271,14 +268,6 @@
 				09A192D32895779500C82A75 /* MyServiceTool.m */,
 			);
 			path = MyTools;
-			sourceTree = "<group>";
-		};
-		09C8407C2870A37A00D8C0A1 /* MyToolsTests */ = {
-			isa = PBXGroup;
-			children = (
-				09C8407D2870A37A00D8C0A1 /* MyToolsTests.m */,
-			);
-			path = MyToolsTests;
 			sourceTree = "<group>";
 		};
 		09C840882870A3B400D8C0A1 /* Frameworks */ = {
@@ -485,7 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09C8407E2870A37A00D8C0A1 /* MyToolsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

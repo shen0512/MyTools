@@ -24,6 +24,9 @@
     
     return documentPath;
 }
++ (NSString*)getTemporaryDirectory{
+    return NSTemporaryDirectory();
+}
 + (void)createFolder:(NSString *)path{
     /**
      @brief create folder
@@ -93,5 +96,38 @@
     
     [jsonData writeToFile:path atomically:YES];
     
+}
++ (NSArray*)loadText:(NSString*)path{
+    NSError *error;
+    NSArray *fileData = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error] componentsSeparatedByString:@"\n"];
+    
+    if(error){
+        NSLog(@"error: %@", error);
+        return nil;
+    }else{
+        return fileData;
+    }
+}
++(void)writeText:(NSString*)path data:(id)data replace:(BOOL)replace{
+    
+    if(!([data isKindOfClass:[NSString class]] || [data isKindOfClass:[NSArray class]])){
+        NSLog(@"The type of data only support NSString or NSArray.");
+        return;
+    }
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if([fileManager fileExistsAtPath:path] && !replace){
+        NSLog(@"file exit.");
+        return;
+    }
+    
+    NSString *str=@"";
+    if([data isKindOfClass:[NSArray class]]){
+        str = [data componentsJoinedByString:@"\n"];
+    }else{
+        str = data;
+    }
+    
+    [str writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 @end
