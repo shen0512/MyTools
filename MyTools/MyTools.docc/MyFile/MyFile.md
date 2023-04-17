@@ -19,7 +19,7 @@
 |[+ (void)writeText:(NSString*)path data:(id)data replace:(BOOL)replace](#writeText)|寫入 txt 資料|
 
 ### getUUID
-+ (NSString*)getUUID
+\+ (NSString*)getUUID
 
 #### ```Example```
 ```objectivec=
@@ -41,7 +41,7 @@
 ```
 
 ### getDocumentPath
-+ (NSString*)getDocumentPath
+\+ (NSString*)getDocumentPath
 
 #### ```Example```
 ```objectivec=
@@ -63,7 +63,7 @@
 ```
 
 ### getTemporaryDirectory
-+ (NSString*)getTemporaryDirectory
+\+ (NSString*)getTemporaryDirectory
 
 #### ```Example```
 ```objectivec=
@@ -85,7 +85,7 @@
 ```
 
 ### createFolder
-+ (void)createFolder:(NSString *)path
+\+ (void)createFolder:(NSString *)path
 
 |Param|Type|Description|
 |---|---|---|
@@ -111,7 +111,7 @@
 ```
 
 ### loadJson
-+ (NSArray*)loadJson:(NSString*)path
+\+ (NSArray*)loadJson:(NSString*)path
 
 |Param|Type|Description|
 |---|---|---|
@@ -142,7 +142,7 @@
 ```
 
 ### writeJson
-+ (void)writeJson:(NSString*)path data:(id)data replace:(BOOL)replace
+\+ (void)writeJson:(NSString*)path data:(id)data replace:(BOOL)replace
 
 |Param|Type|Description|
 |---|---|---|
@@ -177,7 +177,7 @@
 ```
 
 ### loadText
-+ (NSArray*)loadText:(NSString*)path
+\+ (NSArray*)loadText:(NSString*)path
 
 |Param|Type|Description|
 |---|---|---|
@@ -209,7 +209,7 @@
 ```
 
 ### writeText
-+ (void)writeText:(NSString*)path data:(id)data replace:(BOOL)replace
+\+ (void)writeText:(NSString*)path data:(id)data replace:(BOOL)replace
 
 |Param|Type|Description|
 |---|---|---|
