@@ -18,10 +18,10 @@
 |[+ (NSArray*)loadText:(NSString*)path](#loadText)|載入 txt 資料|
 |[+ (void)writeText:(NSString*)path data:(id)data replace:(BOOL)replace](#writeText)|寫入 txt 資料|
 
-### getUUID
+### ```getUUID```
 \+ (NSString*)getUUID
 
-#### ```Example```
+#### Example
 ```objectivec=
 //  ViewController.m
 
@@ -40,10 +40,10 @@
 @end
 ```
 
-### getDocumentPath
+### ```getDocumentPath```
 \+ (NSString*)getDocumentPath
 
-#### ```Example```
+#### Example
 ```objectivec=
 //  ViewController.m
 
@@ -62,10 +62,10 @@
 @end
 ```
 
-### getTemporaryDirectory
+### ```getTemporaryDirectory```
 \+ (NSString*)getTemporaryDirectory
 
-#### ```Example```
+#### Example
 ```objectivec=
 //  ViewController.m
 
@@ -84,14 +84,14 @@
 @end
 ```
 
-### createFolder
+### ```createFolder```
 \+ (void)createFolder:(NSString *)path
 
 |Param|Type|Description|
 |---|---|---|
 |path|NSString|資料夾路徑|
 
-#### ```Example```
+#### Example
 ```objectivec=
 //  ViewController.m
 
@@ -110,7 +110,7 @@
 @end
 ```
 
-### loadJson
+### ```loadJson```
 \+ (NSArray*)loadJson:(NSString*)path
 
 |Param|Type|Description|
@@ -121,7 +121,7 @@
 |---|---|
 |NSArray|json 資料|
 
-#### ```Example```
+#### Example
 ```objectivec=
 //  ViewController.m
 
@@ -141,7 +141,7 @@
 @end
 ```
 
-### writeJson
+### ```writeJson```
 \+ (void)writeJson:(NSString*)path data:(id)data replace:(BOOL)replace
 
 |Param|Type|Description|
@@ -150,7 +150,7 @@
 |data|NSArray or NSArray[NSDictionary]|json 資料|
 |replace|BOOL|取代相同檔名的檔案|
 
-#### ```Example```
+#### Example
 ```objectivec=
 //  ViewController.m
 
@@ -176,7 +176,7 @@
 @end
 ```
 
-### loadText
+### ```loadText```
 \+ (NSArray*)loadText:(NSString*)path
 
 |Param|Type|Description|
@@ -187,7 +187,7 @@
 |---|---|
 |NSArray|字串資料|
 
-#### ```Example```
+#### Example
 ```objectivec=
 //  ViewController.m
 
@@ -208,7 +208,7 @@
 @end
 ```
 
-### writeText
+### ```writeText```
 \+ (void)writeText:(NSString*)path data:(id)data replace:(BOOL)replace
 
 |Param|Type|Description|
@@ -217,7 +217,7 @@
 |data|NSString or NSArray[NSString]|資料|
 |replace|BOOL|取代相同檔名的檔案|
 
-#### ```Example```
+#### Example
 ```objectivec=
 //
 //  ViewController.m
