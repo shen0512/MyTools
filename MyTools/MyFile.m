@@ -64,7 +64,7 @@
     }
     return jsonArray;
 }
-+ (void)writeJson:(NSString*)path :(id) data :(BOOL)replace{
++ (void)writeJson:(NSString*)path data:(id)data replace:(BOOL)replace{
     /**
      @brief write a json file
      @param path file output path

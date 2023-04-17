@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*)getTemporaryDirectory;
 + (void)createFolder:(NSString *)path;
 + (NSArray*)loadJson:(NSString*)path;
-+ (void)writeJson:(NSString*)path :(id) data :(BOOL)replace;
++ (void)writeJson:(NSString*)path data:(id)data replace:(BOOL)replace;
 + (NSArray*)loadText:(NSString*)path;
 + (void)writeText:(NSString*)path data:(id)data replace:(BOOL)replace;
 @end
