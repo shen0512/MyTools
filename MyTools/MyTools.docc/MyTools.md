@@ -7,4 +7,6 @@
 |[MySpeechView](./MySpeech/MySpeechView.md)|語音辨識(UI版)|
 |[MyPreventScreenShot](./MyPreventScreenShot/MyPreventScreenShot.md)|防止螢幕截圖|
 |[MyFile](./MyFile/MyFile.md)|檔案處理相關|
+|[MyDeepLabV3](./MyDeepLabV3.md)|CoreML DeepLab|
+|[MyDeepLabV3View](./MyDeepLabV3View.md)|CoreML DeepLab(UI版)|
 
