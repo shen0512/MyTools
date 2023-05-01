@@ -109,6 +109,7 @@
 		098DA28F293B9FE9003D2274 /* UIWindow+PreventScreenShot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+PreventScreenShot.m"; sourceTree = "<group>"; };
 		098DA296293BA8FC003D2274 /* MyVisionPersonSegmentationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionPersonSegmentationView.h; sourceTree = "<group>"; };
 		098DA297293BA8FC003D2274 /* MyVisionPersonSegmentationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionPersonSegmentationView.m; sourceTree = "<group>"; };
+		0992E36C29FF9AF700CC067B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		099ADAAA2883067700E61155 /* MyFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFile.h; sourceTree = "<group>"; };
 		099ADAAB2883067700E61155 /* MyFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFile.m; sourceTree = "<group>"; };
 		09A192D22895779500C82A75 /* MyServiceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyServiceTool.h; sourceTree = "<group>"; };
@@ -234,6 +235,7 @@
 		09C840642870A37A00D8C0A1 = {
 			isa = PBXGroup;
 			children = (
+				0992E36C29FF9AF700CC067B /* README.md */,
 				09C840702870A37A00D8C0A1 /* MyTools */,
 				09C8406F2870A37A00D8C0A1 /* Products */,
 				09C840882870A3B400D8C0A1 /* Frameworks */,
