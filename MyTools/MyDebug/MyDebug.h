@@ -6,17 +6,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "MyDebugParam.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyDebug : NSObject
-- (instancetype)init:(NSString*)level;
-- (NSString*)getLevelInfo;
-- (void)changeLevel:(NSString *)level;
-- (void)showDebug:(NSString*)msg;
-- (void)showInfo:(NSString*)msg;
-- (void)showWarning:(NSString*)msg;
-- (void)showError:(NSString*)msg;
++ (instancetype)sharedInstance;
+
+-(NSString*_Nullable)prettyPrintedJSON:(id)json;
+
+-(void)showLog:(NSString*)msg level:(LoggerLevel)level;
+-(void)saveJSON:(id)json filename:(NSString*)filename extension:(NSString*)extension foldername:(NSString* _Nullable)foldername;
+-(void)saveImg:(UIImage*)img filename:(NSString*)filename extension:(NSString*)extension foldername:(NSString* _Nullable)foldername;
+-(void)saveFile:(NSString*)filename extension:(NSString*)extension foldername:(NSString* _Nullable)foldername preprocess:(NSData*(^)(void))preprocess;
 
 @end
 
