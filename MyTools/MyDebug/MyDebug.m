@@ -21,6 +21,9 @@
 @property (strong, nonatomic) NSArray* acceptClasses;
 @property (nonatomic) LoggerLevel loggerLevel;
 
+@property (strong, nonatomic) UIButton *debugBtn;
+@property (strong, nonatomic) UITextView *debugView;
+
 @end
 
 @implementation MyDebug
@@ -42,7 +45,7 @@
         self.loggerLevel = LoggerLevelNoShow;
         
         NSString *docpath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-        if(!self.debugRoot || [self.debugRoot isEqualToString:@""]){
+        if(!self.acceptFramework || [self.acceptFramework isEqualToString:@""]){
             self.debugRoot = [docpath stringByAppendingPathComponent:DEFAULTROOT];
         }else{
             self.debugRoot = [docpath stringByAppendingPathComponent:self.acceptFramework];
@@ -57,37 +60,94 @@
     return self;
 }
 
+-(void)initDebugView{
+    UIWindow *keyWindow;
+    for(UIWindowScene *windowScene in [UIApplication sharedApplication].connectedScenes){
+        if(windowScene.activationState == UISceneActivationStateForegroundActive){
+            for(UIWindow *window in windowScene.windows){
+                keyWindow = window;
+                break;
+            }
+        }
+    }
+    if(keyWindow == nil){
+        return;
+    }
+    
+    UIViewController *topController = keyWindow.rootViewController;
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+    CGRect frame = topController.view.frame;
+    
+    self.debugView = [[UITextView alloc] initWithFrame:CGRectMake(0,
+                                                                  frame.size.height*0.65,
+                                                                  frame.size.width,
+                                                                  frame.size.height*0.35)];
+    self.debugView.backgroundColor = [UIColor blackColor];
+    self.debugView.textColor = [UIColor greenColor];
+    self.debugView.font = [UIFont systemFontOfSize:20];
+    self.debugView.editable = NO;
+    self.debugView.selectable = NO;
+    self.debugView.text = @"";
+    [topController.view addSubview:self.debugView];
+    
+    self.debugBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.debugBtn.frame = CGRectMake(0, self.debugView.frame.origin.y-50, 50, 50);
+    self.debugBtn.backgroundColor = [UIColor redColor];
+    [self.debugBtn addTarget:self action:@selector(showLogViewClick) forControlEvents:UIControlEventTouchUpInside];
+    [topController.view addSubview:self.debugBtn];
+}
+
+-(void)showLogViewClick{
+    self.debugView.hidden = !self.debugView.hidden;
+}
+
+-(void)showLogOnView:(NSString*)msg{
+    if(self.debugView == nil) return;
+    
+    self.debugView.text = [self.debugView.text stringByAppendingFormat:@"%@\r\n",msg];
+    if (self.debugView.text.length > 0 ){
+        NSRange bottom = NSMakeRange(self.debugView.text.length - 1, 1);
+        [self.debugView scrollRangeToVisible:bottom];
+    }
+}
+
 #pragma mark - debug file process
 -(void)loadDebugFile{
-    NSString *docpath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    
-    // load debug file
-    NSString *debugFilePath = [docpath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@",DEBUGFILENAME,DEBUGFILEEXTENSION]];
-    NSData *debugData = [NSData dataWithContentsOfFile:debugFilePath];
-    NSArray<NSDictionary*> *json = [NSJSONSerialization JSONObjectWithData:debugData options:0 error:nil];
-    NSMutableDictionary *myDebugParams = [NSMutableDictionary new];
-    for(NSDictionary *dic in json){
-        MyDebugParam *myDebugParam = [[MyDebugParam alloc] initWithDictionary:dic];
-        myDebugParams[myDebugParam.className] = myDebugParam;
+    @try {
+        NSString *docpath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+        
+        // load debug file
+        NSString *debugFilePath = [docpath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@",DEBUGFILENAME,DEBUGFILEEXTENSION]];
+        NSData *debugData = [NSData dataWithContentsOfFile:debugFilePath];
+        NSArray<NSDictionary*> *json = [NSJSONSerialization JSONObjectWithData:debugData options:0 error:nil];
+        NSMutableDictionary *myDebugParams = [NSMutableDictionary new];
+        for(NSDictionary *dic in json){
+            MyDebugParam *myDebugParam = [[MyDebugParam alloc] initWithDictionary:dic];
+            myDebugParams[myDebugParam.className] = myDebugParam;
+        }
+        self.myDebugParams = myDebugParams;
+    } @catch (NSException *exception) {
+        NSLog(@"exception: %@", exception);
     }
-    self.myDebugParams = myDebugParams;
-    
 }
 
 -(void)makeDebugFile{
-    
-    NSMutableArray *json = [NSMutableArray new];
-    for(NSString *key in [self.myDebugParams allKeys]){
-        [json addObject:[self.myDebugParams[key] dictionary]];
+    @try {
+        NSMutableArray *json = [NSMutableArray new];
+        for(NSString *key in [self.myDebugParams allKeys]){
+            [json addObject:[self.myDebugParams[key] dictionary]];
+        }
+        
+        NSString *docpath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+        NSString *debugFilePath = [docpath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@",DEBUGFILENAME,DEBUGFILEEXTENSION]];
+        
+        NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:nil];
+        [data writeToFile:debugFilePath atomically:YES];
+    } @catch (NSException *exception) {
+        NSLog(@"exception: %@", exception);
     }
-    
-    NSString *docpath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *debugFilePath = [docpath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@",DEBUGFILENAME,DEBUGFILEEXTENSION]];
-    
-    NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:nil];
-    [data writeToFile:debugFilePath atomically:YES];
-    
-    
 }
 
 -(NSDictionary<NSString*, NSString*>*)callerParse:(NSString*)callerInfo{
@@ -162,7 +222,10 @@
         
         NSString *outputMsg = [msg stringByAppendingFormat:@"[%@] %@", LoggerLevelStr(level), msg];
         if([self canShowLog:callerInfo[@"framework"] :callerInfo[@"class"]]){
-            if(self.loggerLevel>=level) NSLog(@"%@", outputMsg);
+            if(self.loggerLevel>=level){
+                NSLog(@"%@", outputMsg);
+                [self showLogOnView:outputMsg];
+            }
         }
         
         if([self canSaveLog:callerInfo[@"framework"] :callerInfo[@"class"]]){
@@ -174,32 +237,58 @@
 }
 
 -(void)saveLog:(NSString*)msg{
-    NSString *logPath = [[NSString alloc] initWithString:self.debugRoot];
-    logPath = [logPath stringByAppendingPathComponent:@"log.txt"];
+    @try {
+        NSString *logPath = [[NSString alloc] initWithString:self.debugRoot];
+        logPath = [logPath stringByAppendingPathComponent:@"log.txt"];
+        
+        if(![[NSFileManager defaultManager] fileExistsAtPath:logPath]){
+            [[NSData data] writeToFile:logPath atomically:YES];
+                
+            NSString *outputMsg = [NSString stringWithFormat:@"[%@] 開始寫入r\n", [self getNowTime:@"yyyy-MM-dd HH:mm:ss.SSS"]];
+            NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:logPath];
+            [handle truncateFileAtOffset:[handle seekToEndOfFile]];
+            [handle writeData:[outputMsg dataUsingEncoding:NSUTF8StringEncoding]];
+            [handle closeFile];
+            
+        }
+        
+        NSString *outputMsg = [NSString stringWithFormat:@"[%@] %@\r\n", [self getNowTime:@"yyyy-MM-dd HH:mm:ss.SSS"], msg];
+        NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:logPath];
+        [handle truncateFileAtOffset:[handle seekToEndOfFile]];
+        [handle writeData:[outputMsg dataUsingEncoding:NSUTF8StringEncoding]];
+        [handle closeFile];
+    } @catch (NSException *exception) {
+        NSLog(@"exception: %@", exception);
+    }
     
-    NSString *outputMsg = [NSString stringWithFormat:@"[%@] %@\r\n", [self getNowTime:@"yyyy-MM-dd HH:mm:ss.SSS"], msg];
-    NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:logPath];
-    [handle truncateFileAtOffset:[handle seekToEndOfFile]];
-    [handle writeData:[outputMsg dataUsingEncoding:NSUTF8StringEncoding]];
-    [handle closeFile];
 }
 
--(void)saveJSON:(id)json filename:(NSString*)filename extension:(NSString*)extension foldername:(NSString* _Nullable)foldername{
-    [self saveFile:filename
-         extension:extension
-        foldername:foldername
-        preprocess:^NSData * _Nonnull{
-        return [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:nil];
-    }];
+-(void)saveJSON:(id)json filename:(NSString*)filename foldername:(NSString* _Nullable)foldername{
+    @try {
+        NSString *sourceString = [[NSThread callStackSymbols] objectAtIndex:1];
+        NSDictionary<NSString*, NSString*> *callerInfo = [self callerParse:sourceString];
+        
+        if([self canSaveFile:callerInfo[@"framework"] :callerInfo[@"class"]]){
+            NSData *data = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:nil];
+            [self saveFile:data filename:filename extension:@"json" foldername:foldername];
+        }
+    } @catch (NSException *exception) {
+        NSLog(@"exception: %@", exception);
+    }
 }
 
--(void)saveImg:(UIImage*)img filename:(NSString*)filename extension:(NSString*)extension foldername:(NSString* _Nullable)foldername{
-    [self saveFile:filename
-         extension:extension
-        foldername:foldername
-        preprocess:^NSData * _Nonnull{
-        return UIImagePNGRepresentation(img);
-    }];
+-(void)saveJPG:(UIImage*)img filename:(NSString*)filename foldername:(NSString* _Nullable)foldername{
+    @try {
+        NSString *sourceString = [[NSThread callStackSymbols] objectAtIndex:1];
+        NSDictionary<NSString*, NSString*> *callerInfo = [self callerParse:sourceString];
+        
+        if([self canSaveFile:callerInfo[@"framework"] :callerInfo[@"class"]]){
+            NSData *data = UIImageJPEGRepresentation(img, 1.0);
+            [self saveFile:data filename:filename extension:@"jpg" foldername:foldername];
+        }
+    } @catch (NSException *exception) {
+        NSLog(@"exception: %@", exception);
+    }
 }
 
 -(void)saveFile:(NSString*)filename
@@ -210,17 +299,10 @@
         NSString *sourceString = [[NSThread callStackSymbols] objectAtIndex:1];
         NSDictionary<NSString*, NSString*> *callerInfo = [self callerParse:sourceString];
         
-        if([self canSaveLog:callerInfo[@"framework"] :callerInfo[@"class"]]){
+        if([self canSaveFile:callerInfo[@"framework"] :callerInfo[@"class"]]){
             if(preprocess){
                 NSData *data = preprocess();
-                
-                NSString *filepath = [[NSString alloc] initWithString:self.debugRoot];
-                if(foldername && ![foldername isEqualToString:@""]){
-                    filepath = [filepath stringByAppendingPathComponent:foldername];
-                }
-                filepath = [filepath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", filename, extension]];
-                
-                [data writeToFile:filepath atomically:YES];
+                [self saveFile:data filename:filename extension:extension foldername:foldername];
             }
         }
     }@catch (NSException *exception){
@@ -228,4 +310,19 @@
     }
     
 }
+
+-(void)saveFile:(NSData*)data filename:(NSString*)filename extension:(NSString*)extension foldername:(NSString* _Nullable)foldername{
+    @try {
+        NSString *filepath = [[NSString alloc] initWithString:self.debugRoot];
+        if(foldername && ![foldername isEqualToString:@""]){
+            filepath = [filepath stringByAppendingPathComponent:foldername];
+        }
+        filepath = [filepath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", filename, extension]];
+        
+        [data writeToFile:filepath atomically:YES];
+    } @catch (NSException *exception) {
+        NSLog(@"exception: %@", exception);
+    }
+}
+
 @end

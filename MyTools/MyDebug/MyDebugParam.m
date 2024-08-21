@@ -8,6 +8,7 @@
 #import "MyDebugParam.h"
 
 #define CLASSNAMEKEY @"CLASSNAME"
+#define LOGGERLEVELKEY @"LOGGERLEVEL"
 #define SHOWLOGKEY @"SHOWLOG"
 #define SAVELOGKEY @"SAVELOG"
 #define SAVEFILEKEY @"SAVEFILE"
@@ -20,10 +21,21 @@
     if(self){
         if(![dictionary isKindOfClass:[NSDictionary class]])return nil;
         
-        if(dictionary[CLASSNAMEKEY]) self.className = dictionary[CLASSNAMEKEY];
-        if(dictionary[SHOWLOGKEY]) self.showLog = [dictionary[SHOWLOGKEY] boolValue];
-        if(dictionary[SAVELOGKEY]) self.showLog = [dictionary[SAVELOGKEY] boolValue];
-        if(dictionary[SAVEFILEKEY]) self.showLog = [dictionary[SAVEFILEKEY] boolValue];
+        if(dictionary[CLASSNAMEKEY]){
+            self.className = dictionary[CLASSNAMEKEY];
+        }
+        if(dictionary[LOGGERLEVELKEY]){
+            self.loggerLevel = [dictionary[LOGGERLEVELKEY] intValue];
+        }
+        if(dictionary[SHOWLOGKEY]){
+            self.showLog = [dictionary[SHOWLOGKEY] boolValue];
+        }
+        if(dictionary[SAVELOGKEY]){
+            self.showLog = [dictionary[SAVELOGKEY] boolValue];
+        }
+        if(dictionary[SAVEFILEKEY]){
+            self.showLog = [dictionary[SAVEFILEKEY] boolValue];
+        }
     }
     
     return self;
@@ -33,6 +45,7 @@
     
     if(self){
         self.className = @"";
+        self.loggerLevel = LoggerLevelNoShow;
         self.showLog = NO;
         self.saveLog = NO;
         self.saveFile = NO;
@@ -42,6 +55,7 @@
 }
 -(NSDictionary*)dictionary{
     return @{CLASSNAMEKEY:self.className,
+             LOGGERLEVELKEY:@(self.loggerLevel),
              SHOWLOGKEY:@(self.showLog),
              SAVELOGKEY:@(self.saveLog),
              SAVEFILEKEY:@(self.saveFile)};

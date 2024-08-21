@@ -14,12 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MyDebug : NSObject
 + (instancetype)sharedInstance;
+-(void)initDebugView;
 
 -(NSString*_Nullable)prettyPrintedJSON:(id)json;
 
 -(void)showLog:(NSString*)msg level:(LoggerLevel)level;
--(void)saveJSON:(id)json filename:(NSString*)filename extension:(NSString*)extension foldername:(NSString* _Nullable)foldername;
--(void)saveImg:(UIImage*)img filename:(NSString*)filename extension:(NSString*)extension foldername:(NSString* _Nullable)foldername;
+-(void)saveJSON:(id)json filename:(NSString*)filename foldername:(NSString* _Nullable)foldername;
+-(void)saveJPG:(UIImage*)img filename:(NSString*)filename foldername:(NSString* _Nullable)foldername;
 -(void)saveFile:(NSString*)filename extension:(NSString*)extension foldername:(NSString* _Nullable)foldername preprocess:(NSData*(^)(void))preprocess;
 
 @end

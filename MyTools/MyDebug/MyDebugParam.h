@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, LoggerLevel){
 
 @interface MyDebugParam : NSObject
 @property (nonatomic) NSString *className;
-
+@property (nonatomic) LoggerLevel loggerLevel;
 @property (nonatomic) BOOL showLog;
 @property (nonatomic) BOOL saveLog;
 @property (nonatomic) BOOL saveFile;
