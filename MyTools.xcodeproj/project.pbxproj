@@ -26,6 +26,8 @@
 		0943C3C229169E9700A7B936 /* MyDeepLabV3View.m in Sources */ = {isa = PBXBuildFile; fileRef = 0943C3C029169E9600A7B936 /* MyDeepLabV3View.m */; };
 		0959619128713DBA00F2DE6D /* MyDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 0959618F28713DBA00F2DE6D /* MyDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0959619228713DBA00F2DE6D /* MyDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 0959619028713DBA00F2DE6D /* MyDebug.m */; };
+		095E1A882C7A177400A3A562 /* MyDebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 095E1A872C7A177400A3A562 /* MyDebugView.m */; };
+		095E1A892C7A177400A3A562 /* MyDebugView.h in Headers */ = {isa = PBXBuildFile; fileRef = 095E1A862C7A177400A3A562 /* MyDebugView.h */; };
 		09669CAB2904D443002A505A /* MyVisionFace.h in Headers */ = {isa = PBXBuildFile; fileRef = 09669CA92904D443002A505A /* MyVisionFace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09669CAC2904D443002A505A /* MyVisionFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 09669CAA2904D443002A505A /* MyVisionFace.m */; };
 		09669CAF2904E1AB002A505A /* MyVisionFaceView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09669CAD2904E1AB002A505A /* MyVisionFaceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +53,8 @@
 		09C840732870A37A00D8C0A1 /* MyTools.docc in Sources */ = {isa = PBXBuildFile; fileRef = 09C840722870A37A00D8C0A1 /* MyTools.docc */; };
 		09C840792870A37A00D8C0A1 /* MyTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C8406E2870A37A00D8C0A1 /* MyTools.framework */; };
 		09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C840712870A37A00D8C0A1 /* MyTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09DF545B2C79B51300C4FB13 /* MyDebugMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 09DF54592C79B51300C4FB13 /* MyDebugMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09DF545C2C79B51300C4FB13 /* MyDebugMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DF545A2C79B51300C4FB13 /* MyDebugMonitor.m */; };
 		09E0108F29CC929E008585CD /* MyAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E0108D29CC929E008585CD /* MyAuthenticator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E0109029CC929E008585CD /* MyAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E0108E29CC929E008585CD /* MyAuthenticator.m */; };
 		09E059F12C70359B00B2354A /* MyDebugParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E059EF2C70359B00B2354A /* MyDebugParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -95,6 +99,8 @@
 		0943C3C029169E9600A7B936 /* MyDeepLabV3View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeepLabV3View.m; sourceTree = "<group>"; };
 		0959618F28713DBA00F2DE6D /* MyDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDebug.h; sourceTree = "<group>"; };
 		0959619028713DBA00F2DE6D /* MyDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDebug.m; sourceTree = "<group>"; };
+		095E1A862C7A177400A3A562 /* MyDebugView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDebugView.h; sourceTree = "<group>"; };
+		095E1A872C7A177400A3A562 /* MyDebugView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDebugView.m; sourceTree = "<group>"; };
 		09669CA92904D443002A505A /* MyVisionFace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionFace.h; sourceTree = "<group>"; };
 		09669CAA2904D443002A505A /* MyVisionFace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVisionFace.m; sourceTree = "<group>"; };
 		09669CAD2904E1AB002A505A /* MyVisionFaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVisionFaceView.h; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 		09C840712870A37A00D8C0A1 /* MyTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTools.h; sourceTree = "<group>"; };
 		09C840722870A37A00D8C0A1 /* MyTools.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MyTools.docc; sourceTree = "<group>"; };
 		09C840782870A37A00D8C0A1 /* MyToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09DF54592C79B51300C4FB13 /* MyDebugMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDebugMonitor.h; sourceTree = "<group>"; };
+		09DF545A2C79B51300C4FB13 /* MyDebugMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDebugMonitor.m; sourceTree = "<group>"; };
 		09E0108D29CC929E008585CD /* MyAuthenticator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAuthenticator.h; sourceTree = "<group>"; };
 		09E0108E29CC929E008585CD /* MyAuthenticator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAuthenticator.m; sourceTree = "<group>"; };
 		09E059EF2C70359B00B2354A /* MyDebugParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDebugParam.h; sourceTree = "<group>"; };
@@ -303,6 +311,10 @@
 		09FF462F2969D7B50042EDB9 /* MyDebug */ = {
 			isa = PBXGroup;
 			children = (
+				095E1A862C7A177400A3A562 /* MyDebugView.h */,
+				095E1A872C7A177400A3A562 /* MyDebugView.m */,
+				09DF54592C79B51300C4FB13 /* MyDebugMonitor.h */,
+				09DF545A2C79B51300C4FB13 /* MyDebugMonitor.m */,
 				09E059EF2C70359B00B2354A /* MyDebugParam.h */,
 				09E059F02C70359B00B2354A /* MyDebugParam.m */,
 				0959618F28713DBA00F2DE6D /* MyDebug.h */,
@@ -333,6 +345,7 @@
 				09F552142906C01A00F4F54D /* MyVisionBarcode.h in Headers */,
 				09669CAB2904D443002A505A /* MyVisionFace.h in Headers */,
 				090A72E9290CD591009AB42C /* MyVisionRectangle.h in Headers */,
+				095E1A892C7A177400A3A562 /* MyDebugView.h in Headers */,
 				0943C3C129169E9700A7B936 /* MyDeepLabV3View.h in Headers */,
 				0943C3BB29169C4900A7B936 /* MyDeepLabV3.h in Headers */,
 				090A72ED290CD725009AB42C /* MyVisionRectangleView.h in Headers */,
@@ -344,6 +357,7 @@
 				0970B26B29AA54DA00C8DC57 /* MySpeech.h in Headers */,
 				0970B26C29AA54DA00C8DC57 /* MySpeechView.h in Headers */,
 				09AADBDA296ABC1C00E95FC2 /* MyLogV2.h in Headers */,
+				09DF545B2C79B51300C4FB13 /* MyDebugMonitor.h in Headers */,
 				09FF46322969D7CB0042EDB9 /* MyLog.h in Headers */,
 				09C8407F2870A37A00D8C0A1 /* MyTools.h in Headers */,
 				090A72D8290CBF3D009AB42C /* UIView+Utils.h in Headers */,
@@ -453,6 +467,7 @@
 				0970B26D29AA54DA00C8DC57 /* MySpeechView.m in Sources */,
 				090A72EE290CD725009AB42C /* MyVisionRectangleView.m in Sources */,
 				090A72D4290CBF3D009AB42C /* UIView+Utils.m in Sources */,
+				095E1A882C7A177400A3A562 /* MyDebugView.m in Sources */,
 				098DA28B293B9DD3003D2274 /* MyVisionPersonSegmentation.m in Sources */,
 				0970B26E29AA54DA00C8DC57 /* MySpeech.m in Sources */,
 				099ADAAD2883067700E61155 /* MyFile.m in Sources */,
@@ -475,6 +490,7 @@
 				09F5522C2906CABC00F4F54D /* MyVisionUtils.m in Sources */,
 				093448E6290393DB000664F5 /* MyCameraView.m in Sources */,
 				0943C3BE29169D4700A7B936 /* DeepLabV3.mlkitmodel in Sources */,
+				09DF545C2C79B51300C4FB13 /* MyDebugMonitor.m in Sources */,
 				090A72D7290CBF3D009AB42C /* NSString+Utils.m in Sources */,
 				09E0109029CC929E008585CD /* MyAuthenticator.m in Sources */,
 			);

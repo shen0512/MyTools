@@ -6,23 +6,21 @@
 //
 
 #import "MyDebug.h"
+#import "MyDebugView.h"
 
 #define DEFAULTROOT @"DebugRoot"
 #define DEBUGFILENAME @"DebugParam"
 #define DEBUGFILEEXTENSION @"data"
 
 @interface MyDebug()
-@property (nonatomic) BOOL openDebug;
-
 @property (strong, nonatomic) NSString *debugRoot;
-
 @property (strong, nonatomic) NSDictionary<NSString*, MyDebugParam*>* myDebugParams;
 @property (strong, nonatomic) NSString* acceptFramework;
 @property (strong, nonatomic) NSArray* acceptClasses;
 @property (nonatomic) LoggerLevel loggerLevel;
 
-@property (strong, nonatomic) UIButton *debugBtn;
-@property (strong, nonatomic) UITextView *debugView;
+@property (strong, nonatomic) MyDebugView *myDebugView;
+
 
 @end
 
@@ -54,64 +52,11 @@
         self.debugRoot = [self.debugRoot stringByAppendingPathComponent:startTime];
         [self createFolder:self.debugRoot];
         
-        self.openDebug = YES;
-        
+        self.myDebugView = [MyDebugView new];
     }
     return self;
 }
 
--(void)initDebugView{
-    UIWindow *keyWindow;
-    for(UIWindowScene *windowScene in [UIApplication sharedApplication].connectedScenes){
-        if(windowScene.activationState == UISceneActivationStateForegroundActive){
-            for(UIWindow *window in windowScene.windows){
-                keyWindow = window;
-                break;
-            }
-        }
-    }
-    if(keyWindow == nil){
-        return;
-    }
-    
-    UIViewController *topController = keyWindow.rootViewController;
-    while (topController.presentedViewController) {
-        topController = topController.presentedViewController;
-    }
-    CGRect frame = topController.view.frame;
-    
-    self.debugView = [[UITextView alloc] initWithFrame:CGRectMake(0,
-                                                                  frame.size.height*0.65,
-                                                                  frame.size.width,
-                                                                  frame.size.height*0.35)];
-    self.debugView.backgroundColor = [UIColor blackColor];
-    self.debugView.textColor = [UIColor greenColor];
-    self.debugView.font = [UIFont systemFontOfSize:20];
-    self.debugView.editable = NO;
-    self.debugView.selectable = NO;
-    self.debugView.text = @"";
-    [topController.view addSubview:self.debugView];
-    
-    self.debugBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    self.debugBtn.frame = CGRectMake(0, self.debugView.frame.origin.y-50, 50, 50);
-    self.debugBtn.backgroundColor = [UIColor redColor];
-    [self.debugBtn addTarget:self action:@selector(showLogViewClick) forControlEvents:UIControlEventTouchUpInside];
-    [topController.view addSubview:self.debugBtn];
-}
-
--(void)showLogViewClick{
-    self.debugView.hidden = !self.debugView.hidden;
-}
-
--(void)showLogOnView:(NSString*)msg{
-    if(self.debugView == nil) return;
-    
-    self.debugView.text = [self.debugView.text stringByAppendingFormat:@"%@\r\n",msg];
-    if (self.debugView.text.length > 0 ){
-        NSRange bottom = NSMakeRange(self.debugView.text.length - 1, 1);
-        [self.debugView scrollRangeToVisible:bottom];
-    }
-}
 
 #pragma mark - debug file process
 -(void)loadDebugFile{
@@ -164,7 +109,6 @@
 }
 
 -(BOOL)verifyCaller:(NSString*)framewokName :(NSString*)module{
-    if(!self.openDebug)return NO;
     if(![framewokName isEqualToString:self.acceptFramework])return NO;
     if(![self.acceptClasses containsObject:module])return NO;
     if(!self.myDebugParams) return NO;
@@ -224,7 +168,7 @@
         if([self canShowLog:callerInfo[@"framework"] :callerInfo[@"class"]]){
             if(self.loggerLevel>=level){
                 NSLog(@"%@", outputMsg);
-                [self showLogOnView:outputMsg];
+                [self.myDebugView showLogOnView:outputMsg];
             }
         }
         

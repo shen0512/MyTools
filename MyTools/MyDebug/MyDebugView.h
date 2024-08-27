@@ -10,6 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyDebugView : NSObject
+-(void)showLogOnView:(NSString*)msg;
 
 @end
 

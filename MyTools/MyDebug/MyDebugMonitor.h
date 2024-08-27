@@ -10,6 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyDebugMonitor : NSObject
++(long long unsigned)MemoryUsage;
++(unsigned int)CPUUsage;
++(CGFloat)APPCPUUsage;
++(NSString*)DeviceName;
++(NSString*)IOSVersion;
 
 @end
 
